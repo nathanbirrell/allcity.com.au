@@ -253,8 +253,8 @@ jQuery(document).ready(function () {
     //Slider carousel
 
 
-    // jQuery('.carousel-indicators').find('li').eq(0).addClass('active');
-    // jQuery('.carousel-inner').find('.item').eq(0).addClass('active');
+    jQuery('.carousel-indicators').find('li').eq(0).addClass('active');
+    jQuery('.carousel-inner').find('.item').eq(0).addClass('active');
 
     jQuery('.carousel').each(function () {
         jQuery(this).carousel({
