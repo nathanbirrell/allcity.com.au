@@ -1,0 +1,19 @@
+@import 'theme.css';
+
+/* ==========================================================================
+1. Nathan's changes
+========================================================================== */
+
+.logo-white, .logo-dark {
+  height: 75px;
+
+  .shrink-nav & {
+  	// margin-top: -2px; //override theme
+  }
+}
+
+.main-navigation, .shrink-nav {
+	.collapse-navation {
+		margin-top: 12px;
+	}
+}
