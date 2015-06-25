@@ -255,6 +255,8 @@ jQuery(document).ready(function () {
 
     jQuery('.carousel-indicators').find('li').eq(0).addClass('active');
     jQuery('.carousel-inner').find('.item').eq(0).addClass('active');
+    //Stop auto sliding
+    jQuery('.carousel-inner').find('.item').eq(0).attr('data-interval', 'false');
 
     jQuery('.carousel').each(function () {
         jQuery(this).carousel({
