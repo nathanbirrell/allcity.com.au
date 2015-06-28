@@ -256,17 +256,17 @@ jQuery(document).ready(function () {
     jQuery('.carousel-indicators').find('li').eq(0).addClass('active');
     jQuery('.carousel-inner').find('.item').eq(0).addClass('active');
     //Stop auto sliding
-    jQuery('.carousel-inner').find('.item').eq(0).attr('data-interval', 'false');
+    // jQuery('.carousel-inner').find('.item').eq(0).attr('data-interval', 'false');
 
-    jQuery('.carousel').each(function () {
-        jQuery(this).carousel({
-            //Stop auto sliding
-            interval: false
-            //Auto sliding, define time interval like 5000.
-            // interval: 5600
-        });
-        jQuery(this).carousel('pause');
-    });
+    // jQuery('.carousel').each(function () {
+    //     jQuery(this).carousel({
+    //         //Stop auto sliding
+    //         // interval: false
+    //         //Auto sliding, define time interval like 5000.
+    //         interval: 9600
+    //     });
+    //     jQuery(this).carousel('pause');
+    // });
 
 
     jQuery(window)

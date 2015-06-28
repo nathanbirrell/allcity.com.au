@@ -18,9 +18,9 @@ fb.fn.extend({css:function(a,c){return fb.access(this,function(a,c,d){var e,f,g=
     jQuery('.carousel').each(function () {
         jQuery(this).carousel({
             //Stop auto sliding 
-            //interval: false
+            // interval: false
             //Auto sliding, define time interval like 5000.
-            interval: 5600
+            interval: 9600
         });
         jQuery(this).carousel('pause');
     });
