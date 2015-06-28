@@ -189,21 +189,21 @@
     }
 
     function counterBoxAnimate() {
-        "use strict";
-        var $counterBoxContainers = $('.counterWithAnimation');
-        if (!$counterBoxContainers.length) return;
-        $counterBoxContainers.each(function () {
-            var countNmber = $(this)
-                .attr('data-countNmber');
-            $(this)
-                .find('.counterBoxNumber')
-                .countTo({
-                    from: 0,
-                    to: countNmber,
-                    speed: 1250,
-                    refreshInterval: 100
-                });
-        });
+        // "use strict";
+        // var $counterBoxContainers = $('.counterWithAnimation');
+        // if (!$counterBoxContainers.length) return;
+        // $counterBoxContainers.each(function () {
+        //     var countNmber = $(this)
+        //         .attr('data-countNmber');
+        //     $(this)
+        //         .find('.counterBoxNumber')
+        //         .countTo({
+        //             from: 0,
+        //             to: countNmber,
+        //             speed: 1250,
+        //             refreshInterval: 100
+        //         });
+        // });
     }
 
     function shortcodeAnimation() {

@@ -33,7 +33,7 @@ $fsocial_rss      = cs_get_option('fsocial_rss');
                 <div class="transparent-line"></div>
             </div>
             <div class="row os-animation" data-os-animation="bounceIn">
-                <p class="text-center content-white copy"><?php echo wp_kses_post(cs_get_option('copyright_text')); ?></p>
+                <p class="text-center copy"><?php echo wp_kses_post(cs_get_option('copyright_text')); ?></p>
             </div>
         </div>
     </div>

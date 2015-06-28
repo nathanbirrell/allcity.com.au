@@ -4,6 +4,8 @@
 1. Nathan's changes
 ========================================================================== */
 
+$primary-color: #48a5f2;
+
 .logo-white, .logo-dark {
   height: 75px;
 
@@ -15,5 +17,39 @@
 .main-navigation, .shrink-nav {
 	.collapse-navation {
 		margin-top: 12px;
+	}
+}
+
+.map-style-1 {
+	.map-overlay {
+		// background: none;
+	}
+	.map-overlay:hover {
+	  opacity: 0.9;
+	}
+	.map-button {
+	  background-color: rgba(9,9,9,.7);
+	  color: #fff;
+	}
+}
+
+.team-style10 .team-details:hover {
+	.offers-tour-price {
+	  background-color: $primary-color;
+	  color: #000;
+	}
+}
+
+.footer-style1 .color-overlay {
+	background-color: #fff;
+
+	.footer-social, .copy {
+		li i, p {
+			color: rgb(55, 55, 55);
+		}
+
+		a {
+			color: $primary-color;
+		}
 	}
 }
