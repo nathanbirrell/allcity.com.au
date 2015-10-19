@@ -7,6 +7,8 @@
 
 .main-navigation .collapse-navation, .shrink-nav .collapse-navation {
   margin-top: 12px; }
+.main-navigation .collapse-navation, .shrink-nav .collapse-navation {
+  margin-top: 0; }
 
 .map-style-1 .map-overlay:hover {
   opacity: 0.9; }
