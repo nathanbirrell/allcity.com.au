@@ -10,16 +10,24 @@ function init() {
 	var _selector = $('div.map');
 	var _lat = _selector.data('lat');
 	var _long = _selector.data('long');
+	var latLong = new google.maps.LatLng(_lat, _long);
 	_selector.find('#googlemap').show();
 
 	// Basic options for a simple Google Map
 	// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
 	var mapOptions = {
 		// How zoomed in you want the map to start at (always required)
-		zoom: 11,
+		zoom: 14,
+
+		scrollwheel: false,
+		navigationControl: false,
+	    mapTypeControl: false,
+	    scaleControl: false,
+	    draggable: false,
+	    mapTypeId: google.maps.MapTypeId.ROADMAP,
 
 		// The latitude and longitude to center the map (always required)
-		center: new google.maps.LatLng(_lat, _long), // New York
+		center: latLong, 
 
 		// How you would like to style the map. 
 		// This is where you would paste any style found on Snazzy Maps.
@@ -35,6 +43,19 @@ function init() {
 	setTimeout(function(){
 		$('div.map').find('#googlemap').hide();
 	}, 1000);
+
+	var marker = new google.maps.Marker({
+	    position: latLong,
+	    title: "Hello World!"
+	});
+	var infowindow = new google.maps.InfoWindow({
+		content: "<b>All City Bathrooms and Kitchens</b>"
+	});
+
+	// To add the marker to the map, call setMap();
+	marker.setMap(map);
+
+	infowindow.open(map, marker);
 }
 
 $('a[href=#tab1], a[href=#tg2]').on('click', function() {
