@@ -26,3 +26,12 @@
     color: #373737; }
   .footer-style1 .color-overlay .footer-social a, .footer-style1 .color-overlay .copy a {
     color: #48a5f2; }
+
+.carousel-inner > .item > img {
+  margin: 0 auto; }
+
+.blogpost_share {
+  display: none; }
+
+.home .pagination, .single-post #blog-details {
+  padding-bottom: 0; }
