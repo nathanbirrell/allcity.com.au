@@ -217,19 +217,19 @@ jQuery(document).ready(function () {
     function SetResizeContent() {
         var minheight = jQuery(window).height();
         jQuery(".full-screen").css('min-height', minheight);
+
+        removeCrap(jQuery('.home-slider.full-screen.video-main'));
+        removeCrap(jQuery('.home-slider.full-screen.video-main iframe'));
     }
     SetResizeContent();
 
     function removeCrap($element) {
-        return $element.css('min-height', '475px')
-            .css('min-height', 'none')
-            .css('display', 'block')
-            .css('position', 'relative')
-            .css('top', '0');
+        return $element.css('min-height', '')
+            .css('min-height', '')
+            .css('display', '')
+            .css('position', '')
+            .css('top', '');
     }
-
-    removeCrap(jQuery('.home-slider.full-screen.video-main'));
-    removeCrap(jQuery('.home-slider.full-screen.video-main iframe'));
         
     
     //Navigation Visible On Scroll

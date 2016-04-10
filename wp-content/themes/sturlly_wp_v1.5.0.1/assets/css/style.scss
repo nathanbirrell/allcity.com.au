@@ -73,3 +73,16 @@ $primary-color: #48a5f2;
 .testimonial-title {
     margin-top: 42px;
 }
+
+.home-slider.full-screen.video-main,
+.home-slider.full-screen.video-main iframe,
+.home-slider iframe {
+	min-height: 0;
+	display: block;
+	position: relative;
+	top: 0;
+
+	@media screen and (min-width: 480px) {
+		min-height: 475px;
+	}
+}
