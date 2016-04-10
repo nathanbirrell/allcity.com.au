@@ -19,7 +19,7 @@
 <!-- Set the viewport width to device width for mobile -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="author" content="ppandp">
-<meta name="Description" content="<?php bloginfo('name'); ?>" />
+
 <?php if ( cs_get_option( 'general_favicon' ) ) { echo '<link rel="shortcut icon" href="'. cs_get_option( 'general_favicon' ) .'" type="image/png" />'; } ?>
 <?php wp_head(); ?>
 </head>
