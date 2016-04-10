@@ -101,3 +101,5 @@ node_modules/
 *.codekit
 
 !snippets
+wp-content/plugins/*
+wp-content/plugins
