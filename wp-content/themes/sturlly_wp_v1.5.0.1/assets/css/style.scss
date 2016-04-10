@@ -86,3 +86,16 @@ $primary-color: #48a5f2;
 		min-height: 475px;
 	}
 }
+
+.social-links {
+	margin-top: 20px;
+    
+    a {
+    	color: transparent;
+    }
+    
+    i.fa {
+		font-size: xx-large;
+		margin: 13px;
+	}
+}

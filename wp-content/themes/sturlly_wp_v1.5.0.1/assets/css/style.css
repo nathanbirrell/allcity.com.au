@@ -51,3 +51,11 @@
     .home-slider.full-screen.video-main iframe,
     .home-slider iframe {
       min-height: 475px; } }
+
+.social-links {
+  margin-top: 20px; }
+  .social-links a {
+    color: transparent; }
+  .social-links i.fa {
+    font-size: xx-large;
+    margin: 13px; }

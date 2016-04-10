@@ -540,4 +540,7 @@ jQuery(document).ready(function(){
 
 });
 
+// Remove the stupid white text class that gets auto-added
+$('.work-count p.content-white').removeClass('content-white');
+
 })( jQuery, window, document );
