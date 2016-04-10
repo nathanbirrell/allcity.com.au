@@ -63,7 +63,7 @@ jQuery(document).ready(function () {
     ==================================== */
 
     // Target your .container, .wrapper, .post, etc.
-    jQuery(".video-main").fitVids();
+    // jQuery(".video-main").fitVids();
 
     try {
         var url = window.location.href;
@@ -219,6 +219,19 @@ jQuery(document).ready(function () {
         jQuery(".full-screen").css('min-height', minheight);
     }
     SetResizeContent();
+
+    function removeCrap($element) {
+        return $element.css('min-height', '475px')
+            .css('min-height', 'none')
+            .css('display', 'block')
+            .css('position', 'relative')
+            .css('top', '0');
+    }
+
+    removeCrap(jQuery('.home-slider.full-screen.video-main'));
+    removeCrap(jQuery('.home-slider.full-screen.video-main iframe'));
+        
+    
     //Navigation Visible On Scroll
     mainNav();
     //Popup Scrollbar
