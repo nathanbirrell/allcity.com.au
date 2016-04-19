@@ -74,6 +74,9 @@ Template: sturlly
     font-size: xx-large;
     margin: 13px; }
 
+.blog-details-title {
+  font-weight: 100; }
+
 .carousel-caption {
   position: relative;
   left: 0;
