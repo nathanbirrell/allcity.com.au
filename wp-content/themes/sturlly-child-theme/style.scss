@@ -1,0 +1,119 @@
+/*
+Theme Name: Sturlly (Child Theme)
+Theme URI: http://demo.nrgthemes.com/hempstead
+Author: NRGTHEMES
+Author URI: http://themeforest.net/user/NRGTHEMES
+Description: A stunning visual experience for minimal loving creative. This template is a responsive and retina-ready Wordpress theme with grid system layout. It is optimized for mobile touch and swipe.
+Tags: black, one-column, two-columns, right-sidebar, custom-menu, post-formats, sticky-post, translation-ready, responsive-layout
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sturlly
+Template: sturlly
+*/
+
+/* = Add your own modification from here
+-------------------------------------------------------------- */
+
+// IMPORT THEME CSS HERE
+// @import 'theme.css';
+
+/* ==========================================================================
+1. Nathan's changes
+========================================================================== */
+
+$primary-color: #48a5f2;
+
+.logo-white, .logo-dark {
+  height: 52px;
+
+  .shrink-nav & {
+  	// margin-top: -2px; //override theme
+  }
+}
+
+.main-navigation, .shrink-nav {
+	.collapse-navation {
+		margin-top: 12px;
+	}
+
+	.collapse-navation {
+		margin-top: 0;
+	}
+}
+
+.map-style-1 {
+	.map-overlay {
+		// background: none;
+	}
+	.map-overlay:hover {
+	  opacity: 0.9;
+	}
+	.map-button {
+	  background-color: rgba(9,9,9,.7);
+	  color: #fff;
+	}
+}
+
+.team-style10 .team-details:hover {
+	.offers-tour-price {
+	  background-color: $primary-color;
+	  color: #000;
+	}
+}
+
+.footer-style1 .color-overlay {
+	background-color: #fff;
+
+	.footer-social, .copy {
+		li i, p {
+			color: rgb(55, 55, 55);
+		}
+
+		a {
+			color: $primary-color;
+		}
+	}
+}
+
+.carousel-inner > .item > img {
+	margin: 0 auto;
+}
+
+.blogpost_share {
+	display: none;
+}
+
+.home .pagination, .single-post #blog-details {
+	padding-bottom: 0;
+}
+
+.testimonial-title {
+    margin-top: 42px;
+}
+
+.home-slider.full-screen.video-main,
+.home-slider.full-screen.video-main iframe,
+.home-slider iframe {
+	min-height: 0;
+	display: block;
+	position: relative;
+	top: 0;
+
+	@media screen and (min-width: 480px) {
+		min-height: 475px;
+	}
+}
+
+.social-links {
+	margin-top: 20px;
+    
+    a {
+    	color: transparent;
+    }
+    
+    i.fa {
+		font-size: xx-large;
+		margin: 13px;
+	}
+}
