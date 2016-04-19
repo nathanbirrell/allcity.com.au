@@ -34,11 +34,11 @@ Template: sturlly
   background-color: #48a5f2;
   color: #000; }
 
-.footer-style1 .color-overlay {
+.footer .color-overlay {
   background-color: #fff; }
-  .footer-style1 .color-overlay .footer-social li i, .footer-style1 .color-overlay .footer-social p, .footer-style1 .color-overlay .copy li i, .footer-style1 .color-overlay .copy p {
+  .footer .color-overlay .footer-social li i, .footer .color-overlay .footer-social p, .footer .color-overlay .copy li i, .footer .color-overlay .copy p {
     color: #373737; }
-  .footer-style1 .color-overlay .footer-social a, .footer-style1 .color-overlay .copy a {
+  .footer .color-overlay .footer-social a, .footer .color-overlay .copy a {
     color: #48a5f2; }
 
 .carousel-inner > .item > img {
