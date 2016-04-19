@@ -115,7 +115,7 @@
 /* Popup Slide 4 */
 .popup-slideshow-style4 .popup-navigation { width: 100%; position: absolute; }
 .popup-slideshow-style4 .popup-navigation span { position: fixed; z-index: 1000; color: #FFF; text-align: center; cursor: pointer; font-size: 30px; transition: all 400ms ease-in-out 0s; }
-.popup-slideshow-style4 .popup-navigation span:hover { color: #12569b; }
+.popup-slideshow-style4 .popup-navigation span:hover { color: #48a5f2; }
 .popup-slideshow-style4 .popup-navigation span.nav-prev { right: 48%; top: 50%; background-color: #000; font-size: 35px; padding: 4px 15px 5px 12px; transform: translateY(-50%); }
 .popup-slideshow-style4 .popup-navigation span.nav-next { left: 51.9%; top: 50%; background-color: #000; font-size: 35px; padding: 4px 12px 5px 15px; transform: translateY(-50%); }
 .popup-slideshow-style4 .popup-navigation span.nav-close { padding: 8px 12px; right: 5px; top: 2px; transition: all 400ms ease-in-out 0s; }
@@ -124,7 +124,7 @@
 .popup-slideshow-style4 .popup-slide { list-style: none; margin: 0; padding: 0; width: 100%; height: 100%; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transform: translate3d(0, 0, 150px); transform: translate3d(0, 0, 150px); -webkit-transition: -webkit-transform 0.5s; transition: transform 0.5s; }
 .popup-slideshow-style4 .popup-slide figure { margin: 0; width: 100%; height: 100%; background: #fff; overflow: hidden; }
 .popup-slideshow-style4 .popup-slide figure img { display: block; float: left; }
-.popup-slideshow-style4 .popup-slide .title { color: #12569b; display: inline-block; font-size: 60px; font-weight: 400; letter-spacing: 1px; margin: 0; padding: 0 0 20px; width: 100%; line-height: 60px; }
+.popup-slideshow-style4 .popup-slide .title { color: #48a5f2; display: inline-block; font-size: 60px; font-weight: 400; letter-spacing: 1px; margin: 0; padding: 0 0 20px; width: 100%; line-height: 60px; }
 .popup-slideshow-style4 .popup-slide .popup-slideshow { right: 0; margin: 0; position: absolute; top: 0; visibility: hidden; width: 100%; height: 100%; display: none; }
 .popup-slideshow-style4 .popup-slide .popup-slideshow.show { visibility: visible; }
 .popup-slideshow-style4 .popup-slide .popup-slideshow.current:after { visibility: hidden; opacity: 0; -webkit-transition: opacity 0.3s, visibility 0s 0.3s; transition: opacity 0.3s, visibility 0s 0.3s; }
