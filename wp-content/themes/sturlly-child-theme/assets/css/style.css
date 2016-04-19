@@ -73,3 +73,11 @@ Template: sturlly
   .social-links i.fa {
     font-size: xx-large;
     margin: 13px; }
+
+.carousel-caption {
+  position: relative;
+  left: 0;
+  right: 0; }
+
+.testimonial .carousel-caption {
+  color: #fff; }

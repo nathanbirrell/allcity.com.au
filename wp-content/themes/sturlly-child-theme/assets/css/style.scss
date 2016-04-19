@@ -114,3 +114,15 @@ $primary-color: #48a5f2;
 		margin: 13px;
 	}
 }
+
+// Testimonials / Success stories 
+
+.carousel-caption {
+	position: relative;
+	left: 0;
+    right: 0;
+}
+
+.testimonial .carousel-caption {
+	color: #fff;
+}

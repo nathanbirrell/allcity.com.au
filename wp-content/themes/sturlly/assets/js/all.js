@@ -206,9 +206,9 @@
 	}
 
 	$(window).on('load',function(){
-		setHeightCarusel()
+		// setHeightCarusel()
 	}).on('resize', function(){
-		setHeightCarusel();
+		// setHeightCarusel();
 	});
 
 })(jQuery, window, document);

@@ -30,7 +30,7 @@ fb.fn.extend({css:function(a,c){return fb.access(this,function(a,c,d){var e,f,g=
             //Stop auto sliding 
             //interval: false
             //Auto sliding, define time interval like 5000.
-            interval: 4000
+            interval: 12000
         });
         jQuery(this).carousel('pause');
     });
