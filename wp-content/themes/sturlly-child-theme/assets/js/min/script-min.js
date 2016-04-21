@@ -1,1 +1,0 @@
-jQuery(".work-count p.content-white").removeClass("content-white");
