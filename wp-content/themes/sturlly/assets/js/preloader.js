@@ -10,6 +10,6 @@ jQuery(window).load(function () {
 
     var speed = 500;
 
-    $('div.main').show(speed);
+    jQuery('div.main').show(speed);
 
 });

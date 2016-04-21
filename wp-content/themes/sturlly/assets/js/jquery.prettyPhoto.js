@@ -105,7 +105,7 @@
         // Global elements
         pp_slideshow;
         
-        doresize = true, scroll_pos = _get_scroll();
+        var doresize = true, scroll_pos = _get_scroll();
     
         // Window/Keyboard events
         $(window).unbind('resize.prettyphoto').bind('resize.prettyphoto',function(){ _center_overlay(); _resize_overlay(); });
@@ -483,7 +483,7 @@
                 
                 pp_open = false;
                 
-                delete settings;
+                settings = undefined;
             });
         };
     
@@ -884,7 +884,7 @@
     
     function getHashtag(){
         var url = location.href;
-        hashtag = (url.indexOf('#prettyPhoto') !== -1) ? decodeURI(url.substring(url.indexOf('#prettyPhoto')+1,url.length)) : false;
+        var hashtag = (url.indexOf('#prettyPhoto') !== -1) ? decodeURI(url.substring(url.indexOf('#prettyPhoto')+1,url.length)) : false;
         if(hashtag){  hashtag = hashtag.replace(/<|>/g,''); }
         return hashtag;
     };

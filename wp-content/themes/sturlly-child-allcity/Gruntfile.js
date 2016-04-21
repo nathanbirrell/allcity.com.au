@@ -2,14 +2,16 @@
 var childBase = 'assets/';
 var parentBase = '../sturlly/assets/';
 var scripts = [
-    parentBase + '../../../wp-includes/js/jquery/jquery.js',
-    parentBase + '../../../wp-includes/js/jquery/jquery-migrate.js',
-    parentBase + '../../../wp-includes/js/jquery/jquery-ui-core.js',
+    // Leave jQuery in markup so it can be cached
+    // parentBase + '../../../wp-includes/js/jquery/jquery.js',
+    // parentBase + '../../../wp-includes/js/jquery/jquery-migrate.js',
+    // parentBase + '../../../wp-includes/js/jquery/jquery-ui-core.js',
 
+    // Files included in one line below, left here for reference.
     parentBase + 'js/loader.min.js',
     parentBase + 'js/preloader.js',
     parentBase + 'js/jquery.easing.1.3.js',
-    parentBase + 'js/hover.min.js',
+    // parentBase + 'js/hover.min.js',
     parentBase + 'js/parallel.min.js',
     parentBase + 'js/smooth-scroll.js',
     parentBase + 'js/matchMedia.js',
@@ -18,7 +20,7 @@ var scripts = [
     parentBase + 'js/bootstrap-custom.js',
     parentBase + 'js/jquery.nav.js',
     parentBase + 'js/imagesloaded.pkgd.min.js',
-    parentBase + 'js/custom-scrollbar.min.js',
+    // parentBase + 'js/custom-scrollbar.min.js',
     parentBase + 'js/classie.js',
     parentBase + 'js/portfolio.js',
     parentBase + 'js/jquery.fitvids.js',
@@ -97,11 +99,11 @@ module.exports = function(grunt) {
         tasks: ['sass'] 
       },
       stylesheets: { 
-        files: ['assets/css/*.css'], 
+        files: ['assets/css/*.css', parentBase + 'css/*'], 
         tasks: ['cssmin'] 
       },
       scripts: { 
-        files: ['assets/js/*.js'], 
+        files: ['assets/js/*.js', parentBase + 'js/*'], 
         tasks: ['uglify'] 
       }
     }
