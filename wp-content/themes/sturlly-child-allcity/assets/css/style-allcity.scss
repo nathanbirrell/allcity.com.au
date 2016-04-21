@@ -15,10 +15,19 @@ Template: sturlly
 /* = Add your own modification from here
 -------------------------------------------------------------- */
 
-//@import url('http://allcity.com.au/wp-content/themes/sturlly_wp_v1.5.0.1/assets/css/theme.css');
+// Add parent theme styles
+
+@import '../../../sturlly/assets/scss/animation';
+@import '../../../sturlly/assets/scss/bootstrap';
+@import '../../../sturlly/assets/scss/style';
+@import '../../../sturlly/assets/scss/style-portfolio';
+@import '../../../sturlly/assets/scss/jquery.fancybox';
+@import '../../../sturlly/assets/scss/custom-scrollbar';
+@import '../../../sturlly/assets/scss/responsive';
+@import '../../../sturlly/assets/scss/pretty-photo';
 
 /* ==========================================================================
-1. Nathan's changes
+1. All City Styles
 ========================================================================== */
  
 $primary-color: #48a5f2;

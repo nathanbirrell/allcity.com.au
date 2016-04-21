@@ -75,7 +75,7 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'assets/css/style.css': 'assets/css/style.scss'
+          'assets/css/style.css': 'assets/css/style-allcity.scss'
         }
       }
     },
@@ -95,15 +95,15 @@ module.exports = function(grunt) {
     // configure watch tasks for sass/css/js ------------------------------------
     watch: {
       sass: { 
-        files: ['assets/css/*.scss'], 
+        files: ['assets/css/*.scss', parentBase + 'scss/*.scss'], 
         tasks: ['sass'] 
       },
       stylesheets: { 
-        files: ['assets/css/*.css', parentBase + 'css/*'], 
+        files: ['assets/css/*.css'], 
         tasks: ['cssmin'] 
       },
       scripts: { 
-        files: ['assets/js/*.js', parentBase + 'js/*'], 
+        files: ['assets/js/*.js', parentBase + 'js/*.js'], 
         tasks: ['uglify'] 
       }
     }

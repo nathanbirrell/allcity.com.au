@@ -74,14 +74,14 @@ if( !function_exists('st_enqueue_scripts')) {
     if ( is_singular() ) { wp_enqueue_script( 'comment-reply' ); }
 
     wp_enqueue_style( 'fontawesome',    T_URI . '/assets/css/font-awesome.min.css' );
-    wp_enqueue_style( 'animation',      T_URI . '/assets/css/animation.css' );
-    wp_enqueue_style( 'bootstrap',      T_URI . '/assets/css/bootstrap.css' );
-    wp_enqueue_style( 'custom-style',   T_URI . '/assets/css/style.css' );
-    wp_enqueue_style( 'portfolio-style',T_URI . '/assets/css/style-portfolio.css' );
-    wp_enqueue_style( 'fancybox',       T_URI . '/assets/css/jquery.fancybox.css' );
-    wp_enqueue_style( 'scrollbar',      T_URI . '/assets/css/custom-scrollbar.css' );
-    wp_enqueue_style( 'responsive',     T_URI . '/assets/css/responsive.css' );
-    wp_enqueue_style( 'prettyPhoto',    T_URI . '/assets/css/pretty-photo.css' );
+    // wp_enqueue_style( 'animation',      T_URI . '/assets/css/animation.css' );
+    // wp_enqueue_style( 'bootstrap',      T_URI . '/assets/css/bootstrap.css' );
+    // wp_enqueue_style( 'custom-style',   T_URI . '/assets/css/style.css' );
+    // wp_enqueue_style( 'portfolio-style',T_URI . '/assets/css/style-portfolio.css' );
+    // wp_enqueue_style( 'fancybox',       T_URI . '/assets/css/jquery.fancybox.css' );
+    // wp_enqueue_style( 'scrollbar',      T_URI . '/assets/css/custom-scrollbar.css' );
+    // wp_enqueue_style( 'responsive',     T_URI . '/assets/css/responsive.css' );
+    // wp_enqueue_style( 'prettyPhoto',    T_URI . '/assets/css/pretty-photo.css' );
     rs_enqueue_google_fonts();
 
     wp_enqueue_script( 'jquery-moderziner',     T_URI . '/assets/js/modernizr.custom.js',       array( 'jquery' ), true, false );
