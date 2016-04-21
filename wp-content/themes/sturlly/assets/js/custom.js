@@ -269,27 +269,27 @@ jQuery(document).ready(function () {
     });
 */
 
-    jQuery(window)
-            .scroll(function () {
-                if (jQuery(this)
-                        .scrollTop() > 100) {
-                    jQuery('.scrollToTop')
-                            .fadeIn();
-                } else {
-                    jQuery('.scrollToTop')
-                            .fadeOut();
-                }
-            });
+    // jQuery(window)
+    //         .scroll(function () {
+    //             if (jQuery(this)
+    //                     .scrollTop() > 100) {
+    //                 jQuery('.scrollToTop')
+    //                         .fadeIn();
+    //             } else {
+    //                 jQuery('.scrollToTop')
+    //                         .fadeOut();
+    //             }
+    //         });
 
     //Click event to scroll to top
-    jQuery('.scrollToTop')
-            .click(function () {
-                jQuery('html, body')
-                        .animate({
-                            scrollTop: 0
-                        }, 1000);
-                return false;
-            });
+    // jQuery('.scrollToTop')
+    //         .click(function () {
+    //             jQuery('html, body')
+    //                     .animate({
+    //                         scrollTop: 0
+    //                     }, 1000);
+    //             return false;
+    //         });
 
     /* =================================
      easyPieChart

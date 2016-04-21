@@ -1,5 +1,6 @@
 jQuery(document).ready(function() {
     
-	jQuery('.work-count p.content-white').removeClass('content-white'); 
+    // remove weird white text that gets set mysteriously
+	$('.work-count p.content-white').removeClass('content-white'); 
     
 });
