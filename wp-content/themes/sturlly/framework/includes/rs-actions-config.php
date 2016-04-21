@@ -68,8 +68,8 @@ if( !function_exists('st_enqueue_scripts')) {
     if( ( is_admin() ) ) { return; }
 
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'jquery-migrate' );
-    wp_enqueue_script( 'jquery-ui-core' );
+    // wp_enqueue_script( 'jquery-migrate' );
+    // wp_enqueue_script( 'jquery-ui-core' );
 
     if ( is_singular() ) { wp_enqueue_script( 'comment-reply' ); }
 

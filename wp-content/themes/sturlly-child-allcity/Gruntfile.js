@@ -8,12 +8,12 @@ var scripts = [
     // parentBase + '../../../wp-includes/js/jquery/jquery-ui-core.js',
 
     // Files included in one line below, left here for reference.
-    parentBase + 'js/loader.min.js',
-    parentBase + 'js/preloader.js',
-    parentBase + 'js/jquery.easing.1.3.js',
+    // parentBase + 'js/loader.min.js',
+    // parentBase + 'js/preloader.js',
+    // parentBase + 'js/jquery.easing.1.3.js',
     // parentBase + 'js/hover.min.js',
     parentBase + 'js/parallel.min.js',
-    parentBase + 'js/smooth-scroll.js',
+    // parentBase + 'js/smooth-scroll.js',
     parentBase + 'js/matchMedia.js',
     parentBase + 'js/custom.js',
     parentBase + 'js/conter.js',
@@ -105,6 +105,10 @@ module.exports = function(grunt) {
       scripts: { 
         files: ['assets/js/*.js', parentBase + 'js/*.js'], 
         tasks: ['uglify'] 
+      },
+      grunt: {
+        files: ['Gruntfile.js'],
+        tasks: ['default']
       }
     }
   });

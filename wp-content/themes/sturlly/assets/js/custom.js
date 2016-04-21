@@ -51,9 +51,9 @@ function init() {
 window.onload = init();
 jQuery(document).ready(function () {
 
-    jQuery("[data-rel^='lightbox']").prettyPhoto({
-        deeplinking: false
-    });
+    // jQuery("[data-rel^='lightbox']").prettyPhoto({
+    //     deeplinking: false
+    // });
 
     jQuery('body').find('.grid-gallery').parent().addClass('grid-no-padding');
 
@@ -421,26 +421,26 @@ if (matchMedia('(min-width: 768px) and (max-width: 991px)')
 /* =================================
  Smooth Scroll
  ==================================== */
-var scrollAnimationTime = 1200,
-        scrollAnimation = 'easeInOutExpo';
-jQuery('a.scrollto').bind('click.smoothscroll', function (event) {
-    event.preventDefault();
-    var target = this.hash;
-    jQuery('html, body').stop()
-            .animate({
-                'scrollTop': jQuery(target)
-                        .offset()
-                        .top
-            }, scrollAnimationTime, scrollAnimation, function () {
-                window.location.hash = target;
-            });
-});
-// Inner links
-jQuery('.inner-link').smoothScroll({
-    speed: 900,
-    offset: -68,
-    scrollTarget: '.main:nth-child(3)'
-});
+// var scrollAnimationTime = 1200,
+//         scrollAnimation = 'easeInOutExpo';
+// jQuery('a.scrollto').bind('click.smoothscroll', function (event) {
+//     event.preventDefault();
+//     var target = this.hash;
+//     jQuery('html, body').stop()
+//             .animate({
+//                 'scrollTop': jQuery(target)
+//                         .offset()
+//                         .top
+//             }, scrollAnimationTime, scrollAnimation, function () {
+//                 window.location.hash = target;
+//             });
+// });
+// // Inner links
+// jQuery('.inner-link').smoothScroll({
+//     speed: 900,
+//     offset: -68,
+//     scrollTarget: '.main:nth-child(3)'
+// });
 /* =================================
  Stellar
  ==================================== */
