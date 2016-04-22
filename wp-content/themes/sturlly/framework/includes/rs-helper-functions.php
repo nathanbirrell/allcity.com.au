@@ -39,7 +39,7 @@ if(! function_exists('rs_site_logo')) {
       echo '<h1 class="logo"><a href="'.esc_url($home_url).'">'.get_bloginfo('name').'</a></h1>';
     } else {
       echo '<a class="logo-dark" href="'.esc_url($home_url).'"><img class="logo-dark" alt="..." src="'.esc_url(cs_get_option('general_logo')).'" /></a>';
-      echo '<a class="logo-light" href="'.esc_url($home_url).'"><img class="logo-white" alt="..." src="'.esc_url(cs_get_option('general_logo_light')).'" /></a>';
+      // echo '<a class="logo-light" href="'.esc_url($home_url).'"><img class="logo-white" alt="..." src="'.esc_url(cs_get_option('general_logo_light')).'" /></a>';
     }
 
   }

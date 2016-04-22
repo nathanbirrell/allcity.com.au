@@ -34,7 +34,7 @@
 
     <!-- header-->
     <header id="main-header" data-stellar-background-ratio="0.5" class="header animated header-style1">
-        <nav class="navbar navbar-default navbar-fixed-top nav-transparent overlay-nav sticky-nav" role="navigation">
+        <nav class="navbar navbar-default" role="navigation">
             <div class="container main-navigation">
 
                 <div class="col-md-3 float-left">

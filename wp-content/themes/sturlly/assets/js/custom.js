@@ -217,7 +217,7 @@ jQuery(document).ready(function () {
      Full Screen Header
      ==================================== */
     function SetResizeContent() {
-        var minheight = jQuery(window).height();
+        var minheight = (jQuery(window).height() - 107);
         jQuery(".full-screen").css('min-height', minheight);
     }
     SetResizeContent();

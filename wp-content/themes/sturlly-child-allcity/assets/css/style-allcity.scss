@@ -32,6 +32,27 @@ Template: sturlly
  
 $primary-color: #48a5f2;
 
+// Header styles and overrides
+
+#main-header,
+.header.header-style1 {
+	background-color: #fff;
+
+	.navbar-default .navbar-nav > li > a {
+		color: #000;
+	}
+
+	.navbar-inverse .navbar-blue > li > a:hover {
+	    border-bottom: 1px solid $primary-color;
+	    color: $primary-color;
+	}
+}
+
+// Home slider
+.slider-text-style5 .slider-text {
+    top: 20%;
+}
+
 .logo-white, .logo-dark {
   height: 52px;
 
@@ -49,6 +70,8 @@ $primary-color: #48a5f2;
 		margin-top: 0;
 	}
 }
+
+// Body styles
 
 .map-style-1 {
 	.map-overlay {
