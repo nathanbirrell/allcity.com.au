@@ -216,11 +216,11 @@ jQuery(document).ready(function () {
     /* =================================
      Full Screen Header
      ==================================== */
-    function SetResizeContent() {
-        var minheight = (jQuery(window).height() - 107);
-        jQuery(".full-screen").css('min-height', minheight);
-    }
-    SetResizeContent();
+    // function SetResizeContent() {
+    //     var minheight = (jQuery(window).height() - 107);
+    //     jQuery(".full-screen").css('min-height', minheight);
+    // }
+    // SetResizeContent();
     //Navigation Visible On Scroll
     // mainNav();
     //Popup Scrollbar
@@ -340,7 +340,7 @@ jQuery(document).ready(function () {
                         });
 
                 //Set Height of Full Screen Header
-                SetResizeContent();
+                // SetResizeContent();
 
                 //Portfolio Items Resize
                 jQuery('.portfolio').isotope('reLayout')

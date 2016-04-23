@@ -26,6 +26,8 @@ Template: sturlly
 @import '../../../sturlly/assets/scss/responsive';
 @import '../../../sturlly/assets/scss/pretty-photo';
 
+@import 'foundation/foundation.scss';
+
 /* ==========================================================================
 1. All City Styles
 ========================================================================== */
@@ -53,6 +55,15 @@ $primary-color: #48a5f2;
 }
 
 // Home slider
+
+.home-slider {
+	min-height: 125px;
+
+	@media #{$medium-up} {
+		min-height: 625px;
+	}
+}
+
 .slider-text-style5 .slider-text {
     top: 20%;
 }
