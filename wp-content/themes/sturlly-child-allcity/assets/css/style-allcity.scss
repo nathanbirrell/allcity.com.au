@@ -38,6 +38,10 @@ $primary-color: #48a5f2;
 .header.header-style1 {
 	background-color: #fff;
 
+	.navbar {
+		padding-bottom: 0;
+	}
+
 	.navbar-default .navbar-nav > li > a {
 		color: #000;
 	}

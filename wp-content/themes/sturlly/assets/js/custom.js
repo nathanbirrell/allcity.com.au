@@ -23,27 +23,27 @@ jQuery(window)
  ==================================== */
 
 //Shrink Navigation
-var cbpAnimatedHeader = (function () {
-    function init() {
-        //"use strict";
-        window.addEventListener('scroll', function (event) {
-        }, false);
-        window.addEventListener('scroll', function (e) {
-            if (jQuery(window)
-                    .scrollTop() > 10) {
-                jQuery('nav')
-                        .addClass('shrink-nav');
-            } else {
-                jQuery('nav')
-                        .removeClass('shrink-nav');
-            }
-        });
-    }
-    function scrollY() {
-        return window.pageYOffset || docElem.scrollTop;
-    }
-    init();
-})();
+// var cbpAnimatedHeader = (function () {
+//     function init() {
+//         //"use strict";
+//         window.addEventListener('scroll', function (event) {
+//         }, false);
+//         window.addEventListener('scroll', function (e) {
+//             if (jQuery(window)
+//                     .scrollTop() > 10) {
+//                 jQuery('nav')
+//                         .addClass('shrink-nav');
+//             } else {
+//                 jQuery('nav')
+//                         .removeClass('shrink-nav');
+//             }
+//         });
+//     }
+//     function scrollY() {
+//         return window.pageYOffset || docElem.scrollTop;
+//     }
+//     init();
+// })();
 
 function init() {
 }
@@ -161,18 +161,18 @@ jQuery(document).ready(function () {
                 }
             });
 
-    // Shrink nav on scroll
-    jQuery(window)
-            .scroll(function () {
-                if (jQuery(window)
-                        .scrollTop() > 10) {
-                    jQuery('nav')
-                            .addClass('shrink-nav');
-                } else {
-                    jQuery('nav')
-                            .removeClass('shrink-nav');
-                }
-            });
+    // // Shrink nav on scroll
+    // jQuery(window)
+    //         .scroll(function () {
+    //             if (jQuery(window)
+    //                     .scrollTop() > 10) {
+    //                 jQuery('nav')
+    //                         .addClass('shrink-nav');
+    //             } else {
+    //                 jQuery('nav')
+    //                         .removeClass('shrink-nav');
+    //             }
+    //         });
 
     // Mobile Toggle Control
     jQuery('.mobile-toggle')
@@ -222,7 +222,7 @@ jQuery(document).ready(function () {
     }
     SetResizeContent();
     //Navigation Visible On Scroll
-    mainNav();
+    // mainNav();
     //Popup Scrollbar
 
     var IS_IPAD = navigator.userAgent.match(/iPad/i) != null;
@@ -349,12 +349,12 @@ jQuery(document).ready(function () {
 
     // Navigation Start
      
-        jQuery('.home .main-navigation')
-            .onePageNav({
-                scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
-                scrollOffset: 79,
-                filter: ':not(.external)', //Height of Navigation Bar
-            });
+        // jQuery('.home .main-navigation')
+        //     .onePageNav({
+        //         scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
+        //         scrollOffset: 79,
+        //         filter: ':not(.external)', //Height of Navigation Bar
+        //     });
     
 
 
@@ -375,49 +375,49 @@ jQuery(document).ready(function () {
 });
 
 
-jQuery(window)
-        .scroll(function () {
-            mainNav();
-        });
-if (matchMedia('(min-width: 992px), (max-width: 767px)')
-        .matches) {
-    function mainNav() {
-        var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        if (top > 40)
-            jQuery('.sticky-navigation')
-                    .stop()
-                    .animate({
-                        "top": '0'
-                    });
-        else {
-            jQuery('.sticky-navigation')
-                    .stop()
-                    .animate({
-                        "top": '-80'
-                    });
-            jQuery('#navbar')
-                    .removeClass('in');
-        }
-    }
-}
-if (matchMedia('(min-width: 768px) and (max-width: 991px)')
-        .matches) {
-    function mainNav() {
-        var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-        if (top > 40)
-            jQuery('.sticky-navigation')
-                    .stop()
-                    .animate({
-                        "top": '0'
-                    });
-        else
-            jQuery('.sticky-navigation')
-                    .stop()
-                    .animate({
-                        "top": '-120'
-                    });
-    }
-}
+// jQuery(window)
+//         .scroll(function () {
+//             // mainNav();
+//         });
+// if (matchMedia('(min-width: 992px), (max-width: 767px)')
+//         .matches) {
+//     function mainNav() {
+//         var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+//         if (top > 40)
+//             jQuery('.sticky-navigation')
+//                     .stop()
+//                     .animate({
+//                         "top": '0'
+//                     });
+//         else {
+//             jQuery('.sticky-navigation')
+//                     .stop()
+//                     .animate({
+//                         "top": '-80'
+//                     });
+//             jQuery('#navbar')
+//                     .removeClass('in');
+//         }
+//     }
+// }
+// if (matchMedia('(min-width: 768px) and (max-width: 991px)')
+//         .matches) {
+//     function mainNav() {
+//         var top = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+//         if (top > 40)
+//             jQuery('.sticky-navigation')
+//                     .stop()
+//                     .animate({
+//                         "top": '0'
+//                     });
+//         else
+//             jQuery('.sticky-navigation')
+//                     .stop()
+//                     .animate({
+//                         "top": '-120'
+//                     });
+//     }
+// }
 /* =================================
  Smooth Scroll
  ==================================== */
