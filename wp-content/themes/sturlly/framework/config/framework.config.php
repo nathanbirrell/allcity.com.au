@@ -106,7 +106,7 @@ $options[]      = array(
       'type'      => 'typography',
       'title'     => 'Heading (H1,H2,...H6)',
       'default'   => array(
-        'family'   => 'Oswald',
+        'family'   => 'Open Sans',
         'font'     => 'google'
       ),
       'variant'   => false,

@@ -325,13 +325,13 @@ if(!function_exists('rs_enqueue_google_fonts')) {
 
     $query_args    = array();
     $typography    = array();
-    $heading       = cs_get_option('heading_typo');
+    // $heading       = cs_get_option('heading_typo');
     $body          = cs_get_option('body_typo');
 
     $typography    =  array(
       array(
         'selector' => 'h1,h2,h3,h4,h5,h6',
-        'font'     => $heading
+        'font'     => $body
       ),
       array(
         'selector' => 'body',
@@ -368,13 +368,13 @@ if ( ! function_exists( 'rs_get_typography' ) ) {
     $body_color         = cs_get_option('body_color');
 
     $typography =  array(
-      0 => array(
-        'selector' => 'h1,h2,h3,h4,h5',
-        'color'    => $heading_color,
-        'font'     => $heading_typography
-      ),
+      // 0 => array(
+      //   'selector' => 'h1,h2,h3,h4,h5',
+      //   'color'    => $heading_color,
+      //   'font'     => $heading_typography
+      // ),
 
-      1 => array(
+      0 => array(
         'selector'    => 'body',
         'color'       => $body_color,
         'font'        => $body_typography,

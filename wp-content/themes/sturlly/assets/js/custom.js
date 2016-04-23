@@ -258,7 +258,7 @@ jQuery(document).ready(function () {
         //jQuery('.carousel-indicators').find('li').eq(0).addClass('active');
     //jQuery('.carousel-inner').find('.item').eq(0).addClass('active');
 
-    /*jQuery('.carousel').each(function () {
+    jQuery('.carousel').each(function () {
         jQuery(this).carousel({
             //Stop auto sliding
             //interval: false
@@ -267,7 +267,7 @@ jQuery(document).ready(function () {
         });
         jQuery(this).carousel('pause');
     });
-*/
+
 
     // jQuery(window)
     //         .scroll(function () {
