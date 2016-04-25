@@ -29,159 +29,173 @@ Template: sturlly
 @import 'foundation/foundation.scss';
 
 /* ==========================================================================
-1. All City Styles
+All City Styles
 ========================================================================== */
  
 $primary-color: #48a5f2;
 
+// **************
 // Header styles and overrides
+// **************
 
-#main-header,
-.header.header-style1 {
-	background-color: #fff;
+	#main-header,
+	.header.header-style1 {
+		background-color: #fff;
 
-	.navbar {
+		.navbar {
+			padding-bottom: 0;
+		}
+
+		.navbar-default .navbar-nav > li > a {
+			color: #000;
+		}
+
+		.navbar-inverse .navbar-blue > li > a:hover {
+		    // border-bottom: 1px solid $primary-color;
+		    color: $primary-color;
+		}
+	}
+
+// **************
+// Home slider
+// **************
+
+	.home-slider {
+		min-height: 310px;
+
+		@media #{$medium-up} {
+			min-height: 625px;
+		}
+	}
+
+	.slider-text-style4 .slider-text {
+	    top: 20%;
+
+	    h1 {
+	    	border: none;
+	    }
+	}
+
+	.slider-gradient-overlay {
+		background: rgba(0, 0, 0, 0.45); //black slider
+	}
+
+	.logo-white, .logo-dark {
+	  height: 52px;
+
+	  .shrink-nav & {
+	  	// margin-top: -2px; //override theme
+	  }
+	}
+
+	.main-navigation, .shrink-nav {
+		.collapse-navation {
+			margin-top: 12px;
+		}
+
+		.collapse-navation {
+			margin-top: 0;
+		}
+	}
+
+// **************
+// Homepage body styles
+// **************
+
+	.map-style-1 {
+		.map-overlay {
+			// background: none;
+		}
+		.map-overlay:hover {
+		  opacity: 0.9;
+		}
+		.map-button {
+		  background-color: rgba(9,9,9,.7);
+		  color: #fff;
+		}
+	}
+
+	.team-style10 .team-details:hover {
+		.offers-tour-price {
+		  background-color: $primary-color;
+		  color: #000;
+		}
+	}
+
+	.footer .color-overlay {
+		background-color: #fff;
+
+		.footer-social, .copy {
+			li i, p {
+				color: rgb(55, 55, 55);
+			}
+
+			a {
+				color: $primary-color;
+			}
+		}
+	}
+
+	.carousel-inner > .item > img {
+		margin: 0 auto;
+	}
+
+	.blogpost_share {
+		display: none;
+	}
+
+	.home .pagination, .single-post #blog-details {
 		padding-bottom: 0;
 	}
 
-	.navbar-default .navbar-nav > li > a {
-		color: #000;
+	.testimonial-title {
+	    margin-top: 42px;
 	}
 
-	.navbar-inverse .navbar-blue > li > a:hover {
-	    border-bottom: 1px solid $primary-color;
-	    color: $primary-color;
-	}
-}
+	.home-slider.full-screen.video-main,
+	.home-slider.full-screen.video-main iframe,
+	.home-slider iframe {
+		min-height: 0;
+		display: block;
+		position: relative;
+		top: 0;
 
-// Home slider
-
-.home-slider {
-	min-height: 310px;
-
-	@media #{$medium-up} {
-		min-height: 625px;
-	}
-}
-
-.slider-text-style5 .slider-text {
-    top: 20%;
-}
-
-.slider-gradient-overlay {
-	background: rgba(0, 0, 0, 0.45); //black slider
-}
-
-.logo-white, .logo-dark {
-  height: 52px;
-
-  .shrink-nav & {
-  	// margin-top: -2px; //override theme
-  }
-}
-
-.main-navigation, .shrink-nav {
-	.collapse-navation {
-		margin-top: 12px;
-	}
-
-	.collapse-navation {
-		margin-top: 0;
-	}
-}
-
-// Body styles
-
-.map-style-1 {
-	.map-overlay {
-		// background: none;
-	}
-	.map-overlay:hover {
-	  opacity: 0.9;
-	}
-	.map-button {
-	  background-color: rgba(9,9,9,.7);
-	  color: #fff;
-	}
-}
-
-.team-style10 .team-details:hover {
-	.offers-tour-price {
-	  background-color: $primary-color;
-	  color: #000;
-	}
-}
-
-.footer .color-overlay {
-	background-color: #fff;
-
-	.footer-social, .copy {
-		li i, p {
-			color: rgb(55, 55, 55);
-		}
-
-		a {
-			color: $primary-color;
+		@media screen and (min-width: 480px) {
+			min-height: 475px;
 		}
 	}
-}
 
-.carousel-inner > .item > img {
-	margin: 0 auto;
-}
-
-.blogpost_share {
-	display: none;
-}
-
-.home .pagination, .single-post #blog-details {
-	padding-bottom: 0;
-}
-
-.testimonial-title {
-    margin-top: 42px;
-}
-
-.home-slider.full-screen.video-main,
-.home-slider.full-screen.video-main iframe,
-.home-slider iframe {
-	min-height: 0;
-	display: block;
-	position: relative;
-	top: 0;
-
-	@media screen and (min-width: 480px) {
-		min-height: 475px;
+	.social-links {
+		margin-top: 20px;
+	    
+	    a {
+	    	color: transparent;
+	    }
+	    
+	    i.fa {
+			font-size: xx-large;
+			margin: 13px;
+		}
 	}
-}
 
-.social-links {
-	margin-top: 20px;
-    
-    a {
-    	color: transparent;
-    }
-    
-    i.fa {
-		font-size: xx-large;
-		margin: 13px;
-	}
-}
-
+// **************
 // Blog post pages
+// **************
 
-.blog-details-title {
-	font-weight: 100;
-}
+	.blog-details-title {
+		font-weight: 100;
+	}
 
+// **************
 // Testimonials / Success stories 
+// **************
 
-.carousel-caption {
-	position: relative;
-	left: 0;
-    right: 0;
-}
+	.carousel-caption {
+		position: relative;
+		left: 0;
+	    right: 0;
+	}
 
-.testimonial .carousel-caption {
-	color: #fff;
-}
+	.testimonial .carousel-caption {
+		color: #fff;
+	}
