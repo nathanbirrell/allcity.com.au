@@ -13,7 +13,7 @@ if( !function_exists('st_site_menu')) {
 
     echo '<div class="col-md-9 text-left float-right collapse-navation">
             <div class="navbar-collapse collapse navbar-inverse no-transition">
-              <ul class="nav navbar-nav navbar-right navbar-'.sanitize_html_class($skin).'">';
+              <ul class="nav navbar-nav navbar-left navbar-'.sanitize_html_class($skin).'">';
 
     if ( function_exists('wp_nav_menu') && has_nav_menu( 'primary-menu' ) ) {
 
@@ -29,6 +29,7 @@ if( !function_exists('st_site_menu')) {
     }
 
     echo '</ul>
+          <a href="#contact" title="Call us to get a quote on your Kitchen or Bathroom ideas" target="_self" class="small-button float-right cta">Get your free quote</a>
         </div>
       </div>';
   }

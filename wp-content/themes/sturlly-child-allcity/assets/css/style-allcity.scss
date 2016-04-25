@@ -48,11 +48,40 @@ $primary-color: #48a5f2;
 
 		.navbar-default .navbar-nav > li > a {
 			color: #000;
+			border-bottom: none;
+			text-align: center;
 		}
 
 		.navbar-inverse .navbar-blue > li > a:hover {
-		    // border-bottom: 1px solid $primary-color;
+		    border-bottom: none;
 		    color: $primary-color;
+		}
+
+		.nav li {
+			border-bottom: none;
+		}
+
+		.small-button.cta {
+			color: $primary-color;
+			border-color: $primary-color;
+			margin: 6px 0;
+			
+			width: 100%;
+    		text-align: center;
+
+			&:hover {
+				color: #fff;
+				background-color: $primary-color;
+			}
+
+			@media #{$medium-up} {
+				display: block;
+				width: auto;
+			}
+		}
+
+		.navbar-toggle {
+			background-color: $primary-color;
 		}
 	}
 

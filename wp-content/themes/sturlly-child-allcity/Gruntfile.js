@@ -95,8 +95,8 @@ module.exports = function(grunt) {
     // configure watch tasks for sass/css/js ------------------------------------
     watch: {
       sass: { 
-        files: ['assets/css/*.scss', parentBase + 'scss/*.scss'], 
-        tasks: ['sass','cssmin'] 
+        files: ['assets/css/*.scss', 'assets/css/foundation/*', parentBase + 'scss/*.scss'], 
+        tasks: ['sass'] 
       },
       scripts: { 
         files: ['assets/js/*.js', parentBase + 'js/*.js'], 
@@ -112,6 +112,7 @@ module.exports = function(grunt) {
 
   // ============= // CREATE TASKS ========== //
   grunt.registerTask('default', ['uglify', 'sass', 'cssmin', 'watch']);
+  grunt.registerTask('build', ['uglify', 'sass', 'cssmin']);
 
   // ===========================================================================
   // LOAD GRUNT PLUGINS ========================================================
