@@ -34,6 +34,12 @@ All City Styles
  
 $primary-color: #48a5f2;
 
+// Global
+
+h1 {
+	text-transform: none;
+}
+
 // **************
 // Header styles and overrides
 // **************
@@ -100,13 +106,43 @@ $primary-color: #48a5f2;
 	.slider-text-style4 .slider-text {
 	    top: 20%;
 
-	    h1 {
+	    h1, 
+	    span {
 	    	border: none;
+	    	text-transform: none;
 	    }
 	}
 
 	.slider-gradient-overlay {
 		background: rgba(0, 0, 0, 0.45); //black slider
+	}
+
+	// Fade transition for carousel items
+	.carousel {
+	  .item {
+	    left: 0 !important;
+	    -webkit-transition: opacity .4s; /*adjust timing here */
+         -moz-transition: 	opacity .4s;
+           -o-transition: 	opacity .4s;
+              transition: 	opacity .4s;
+	  }
+	  .carousel-control {
+	    background-image: none; // remove background gradients on controls
+	  }
+	  // Fade controls with items
+	  .next.left,
+	  .prev.right {
+	    opacity: 1;
+	    z-index: 1;
+	  }
+	  .active.left,
+	  .active.right {
+	    opacity: 0;
+	    z-index: 2;
+	  }
+	  .carousel-indicators {
+	  	display: none; // No need for controls with the fading now.
+	  }
 	}
 
 	.logo-white, .logo-dark {
