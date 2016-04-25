@@ -162,9 +162,18 @@ h1 {
 	  .item {
 	    left: 0 !important;
 	    -webkit-transition: opacity .4s; /*adjust timing here */
-         -moz-transition: 	opacity .4s;
-           -o-transition: 	opacity .4s;
-              transition: 	opacity .4s;
+        -moz-transition: opacity .4s;
+        -o-transition: opacity .4s;
+        transition: opacity .4s;
+
+        // Blur background image
+        .fill {
+        	-webkit-filter: blur(1px);
+		    -moz-filter: blur(1px);
+		    -o-filter: blur(1px);
+		    -ms-filter: blur(1px);
+		    filter: blur(1px);
+        }
 	  }
 	  .carousel-control {
 	    background-image: none; // remove background gradients on controls
