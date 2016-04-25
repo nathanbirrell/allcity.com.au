@@ -229,27 +229,27 @@ jQuery(document).ready(function () {
     var IS_IPHONE = (navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAgent.match(/iPod/i) != null);
 
 
-    if (IS_IPAD == true || IS_IPHONE == true) {
-        jQuery(".content-scroll").mCustomScrollbar({
-            autoHideScrollbar: true,
-            theme: "minimal-dark"
-        });
-    }
-    else
-    {
-        jQuery('li.content-scroll figure').removeAttr('class');
+    // if (IS_IPAD == true || IS_IPHONE == true) {
+    //     jQuery(".content-scroll").mCustomScrollbar({
+    //         autoHideScrollbar: true,
+    //         theme: "minimal-dark"
+    //     });
+    // }
+    // else
+    // {
+    //     jQuery('li.content-scroll figure').removeAttr('class');
 
-        try {
-            jQuery(".content-scroll").mCustomScrollbar({
-                autoHideScrollbar: true,
-                theme: "minimal-dark"
-            });
-        }
-        catch (err) {
-        }
+    //     try {
+    //         jQuery(".content-scroll").mCustomScrollbar({
+    //             autoHideScrollbar: true,
+    //             theme: "minimal-dark"
+    //         });
+    //     }
+    //     catch (err) {
+    //     }
 
 
-    }
+    // }
 
 
     //Slider carousel
