@@ -29,7 +29,10 @@ if( !function_exists('st_site_menu')) {
     }
 
     echo '</ul>
-          <a href="#contact" title="Call us to get a quote on your Kitchen or Bathroom ideas" target="_self" class="small-button float-right cta">Get your free quote</a>
+          <div class-"ctas">
+              <a href="tel:0395717000" title="Call us to get a quote on your Kitchen or Bathroom projects" target="_self" class="small-button float-right cta phone">03 9571 7000</a>
+              <a href="#contact" title="Contact us to get a quote on your Kitchen or Bathroom projects" target="_self" class="small-button float-right cta">Get your free quote</a>
+          </div>
         </div>
       </div>';
   }

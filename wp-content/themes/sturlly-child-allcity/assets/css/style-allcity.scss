@@ -66,6 +66,9 @@ h1 {
 		.nav li {
 			border-bottom: none;
 		}
+		.nav > li > a {
+		    margin: 10px 13px 10px;
+		}
 
 		.small-button.cta {
 			color: $primary-color;
@@ -86,8 +89,37 @@ h1 {
 			}
 		}
 
+		.cta.phone {
+			border-color: transparent;
+			color: #000;
+
+			&:hover {
+				color: $primary-color;
+				background-color: transparent;
+			}
+		}
+
 		.navbar-toggle {
 			background-color: $primary-color;
+		}
+
+		.main-navigation {
+			.navbar-collapse {
+				padding-left: 0;
+			}
+			.col-md-3 {
+			    padding-left: 0;
+			    padding-right: 0;
+			}
+			&, .shrink-nav {
+				.collapse-navation {
+					margin-top: 12px;
+				}
+
+				.collapse-navation {
+					margin-top: 0;
+				}
+			}
 		}
 	}
 
@@ -104,12 +136,20 @@ h1 {
 	}
 
 	.slider-text-style4 .slider-text {
-	    top: 20%;
+	    top: 14%;
+
+	    @media #{$medium-up} {
+	    	top: 20%;
+	    }
 
 	    h1, 
 	    span {
 	    	border: none;
 	    	text-transform: none;
+
+	    	@media #{$small-only} {
+	    		line-height: 1.4;
+	    	}
 	    }
 	}
 
@@ -151,16 +191,6 @@ h1 {
 	  .shrink-nav & {
 	  	// margin-top: -2px; //override theme
 	  }
-	}
-
-	.main-navigation, .shrink-nav {
-		.collapse-navation {
-			margin-top: 12px;
-		}
-
-		.collapse-navation {
-			margin-top: 0;
-		}
 	}
 
 // **************
