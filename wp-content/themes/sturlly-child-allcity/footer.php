@@ -77,10 +77,10 @@ $csocial_intagram   = cs_get_option('csocial_intagram');
               <div class="head">
                  <span class="contact-title"></span>
                  <p class="content contact-text"></p>
-                 <p><strong>Visit The Showroom</strong></p>
-                 <p>516 Waverley Road,<br>
+                 <p><strong>Visit the Showroom</strong></p>
+                 <p> <a href="https://www.google.com.au/maps/place/All+City+Bathrooms+%26+Kitchens/@-37.8796416,145.0695946,15z" title="Find Us in Malvern East">516 Waverley Road,<br>
                     Malvern East, VIC 3145
-                 </p>
+                 </a></p>
                  <p></p>
               </div>
            </div>
