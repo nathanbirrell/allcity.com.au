@@ -1478,7 +1478,7 @@ ul.children {clear: both;overflow: hidden;}
 .service-style1 .service-icon i { font-size: 60px; }
 .service-style1.service-box { padding-top: 5%; padding-bottom: 5%; }
 .service-style1.service-box:hover { background-color: #FFF; }
-.service-style1.service-box:hover .service-icon i { position: relative; bottom: 5px; -webkit-animation: 0.8s linear 0s normal none infinite iconFloat; animation: 0.8s linear 0s normal none infinite iconFloat; }
+.service-style1.service-box:hover .service-icon i { position: relative; /*bottom: 5px; -webkit-animation: 0.8s linear 0s normal none infinite iconFloat; animation: 0.8s linear 0s normal none infinite iconFloat;*/ }
 .service-style1 .service-icon { margin-bottom: 28px; }
 
 /* Service Style 2 */
