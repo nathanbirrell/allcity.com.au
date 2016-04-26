@@ -25,7 +25,7 @@ var scripts = [
     parentBase + 'js/portfolio.js',
     parentBase + 'js/jquery.fitvids.js',
     parentBase + 'js/jquery.prettyPhoto.js',
-    parentBase + 'js/map.js',
+    // parentBase + 'js/map.js',
     parentBase + 'js/counter.js',
     parentBase + 'js/coming-soon.js',
     parentBase + 'js/all.js',
@@ -35,6 +35,8 @@ var scripts = [
 
     // parentBase + 'js/*.js',
 
+    childBase + 'js/vendor/clipboard.js',
+    
     childBase + 'js/script.js'
 ];
 

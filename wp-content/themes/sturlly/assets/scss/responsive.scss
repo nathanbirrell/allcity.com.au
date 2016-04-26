@@ -172,7 +172,7 @@ Version:1.0.0
 @media (max-width:991px) {
     .simple-text { height:119px !important; line-height:22px !important; padding-top: 1%; }
     .simple-text p { font-size:14px; line-height:20px; }
-    .title-text { height:119px !important; padding-top: 2%; }
+    .title-text {padding-top: 2%; }
     .feature-contant { margin-top:5% !important; margin-bottom:2% !important; }
     .feature-contant .col-md-6 { margin-bottom:4%; }
 /*    .count-box { margin-bottom:5%; margin-left:6%; }*/
@@ -308,7 +308,7 @@ Version:1.0.0
     .header-text-style4 .intro-section { top: 32%; padding: 40px 0 40px 40px; left: 44%; }
     .header-text-style4 .intro-section .intro { line-height: inherit; margin: 0 0 15px; }
     .header-text-style4 .treatments { padding: 13px 0 23px; }
-    .title-style4 h2.title { font-size: inherit !important; margin: 90px 0 31px; padding-bottom: 0;}
+    .title-style4 h2.title { font-size: inherit; margin: 90px 0 31px; padding-bottom: 0;}
     .black-bg .about-details .padding-70 { padding: 35px;}
     .black-bg .about-details h6.light-gray { font-size: 18px; line-height: 26px; margin-top: 0; }
     .column-text-553b83cb0b23a p { font-size: 18px; line-height: 26px; margin-top: 0; }
@@ -415,7 +415,7 @@ Version:1.0.0
     .carousel-caption span { margin-bottom: 10%; }
     .fetaure-details .content { width: 83%; }
     .margin-top { margin-top: 4% !important; }
-    .title-text { height: 180px !important; }
+    // .title-text { height: 180px !important; }
     .simple-text { padding-left: 17px; height: 180px !important; }
     .carousel-inner .container { margin: 0; width: 100%; }
     .count-box:nth-child(3), 
@@ -515,7 +515,7 @@ Version:1.0.0
     .portfolio-style6 .portfolio-figure figcaption span { display: block;}
     .work-count-style3 h6 { font-size: 16px; margin-top: 0; }
     .title-style3 .description { display: inline-block; margin-top: 0 !important; width: 100%; margin-bottom: 0 !important}
-    .title-style3 .title-text { height: inherit !important;}
+    // .title-style3 .title-text { height: inherit !important;}
     .header-text-style4 .intro-section { padding: 30px 0 30px 30px; }
     .header-text-style4 .intro-section .intro { margin-bottom: 10px; }
     .header-text-style4 .highlight { font-size: 34px; }
@@ -1317,7 +1317,7 @@ Version:1.0.0
 }
 @media (max-width:320px) {
     h5.title { font-size: 14px; }
-    h2.title { font-size: 32px !important; letter-spacing: 0 }
+    h2.title { font-size: 32px; letter-spacing: 0 }
     span.highlight { font-size: 28px; }
     .intro { font-size: 19px; }
     .frameOverlay .col-md-offset-2 { margin-left: 15.667% !important; }

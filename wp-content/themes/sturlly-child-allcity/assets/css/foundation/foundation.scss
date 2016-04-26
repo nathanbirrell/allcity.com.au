@@ -11,9 +11,11 @@
 // Global variables and styles
 @import 'global';
 
+@import 'settings/settings';
+
 // Components
 // @import 'grid/grid';
-// @import 'typography/typography';
+@import 'typography/typography';
 // @import 'forms/forms';
 @import 'components/visibility';
 @import 'components/float';

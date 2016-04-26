@@ -14,7 +14,7 @@ function sturlly_parent_styles() {
 	
 	wp_enqueue_style('allcity-style', get_stylesheet_directory_uri() . '/assets/css/style.css', array());
 
-	wp_enqueue_script('allcity-script', get_stylesheet_directory_uri() . '/assets/js/script.min.js', array('google-maps'), false, true);
+	wp_enqueue_script('allcity-script', get_stylesheet_directory_uri() . '/assets/js/script.min.js', array(), false, true);
 
 	wp_localize_script('allcity-script', 'rs_ajax',
       array(
