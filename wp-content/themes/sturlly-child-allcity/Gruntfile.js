@@ -57,15 +57,26 @@ module.exports = function(grunt) {
 
     // configure uglify to minify js files -------------------------------------
     uglify: {
-      options: {
-        banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd hh:mm:ss") %> \n*/\n',
-        sourceMap: false,
-        beautify: false,
-        mangle: false
-      },
-      build: {
+      prod: {
+        options: {
+          banner: '/*\n <%= pkg.name %> PROD <%= grunt.template.today("yyyy-mm-dd hh:mm:ss") %> \n*/\n',
+          sourceMap: false,
+          beautify: false,
+          mangle: false
+        },
         files: {
           'assets/js/script.min.js': scripts
+        }
+      },
+      dev: {
+        options: {
+          banner: '/*\n <%= pkg.name %> DEV <%= grunt.template.today("yyyy-mm-dd hh:mm:ss") %> \n*/\n',
+          sourceMap: true,
+          beautify: true,
+          mangle: false
+        },
+        files: {
+          'assets/js/scripta.min.js': scripts
         }
       }
     },
@@ -77,7 +88,7 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'assets/css/style.css': 'assets/css/style-allcity.scss'
+          'assets/css/style.min.css': 'assets/css/style-allcity.scss'
         }
       }
     },
@@ -113,8 +124,8 @@ module.exports = function(grunt) {
 
 
   // ============= // CREATE TASKS ========== //
-  grunt.registerTask('default', ['uglify', 'sass', 'cssmin', 'watch']);
-  grunt.registerTask('build', ['uglify', 'sass', 'cssmin']);
+  grunt.registerTask('default', ['uglify:dev', 'sass', 'cssmin', 'watch']);
+  grunt.registerTask('build', ['uglify:prod', 'sass', 'cssmin']);
 
   // ===========================================================================
   // LOAD GRUNT PLUGINS ========================================================
