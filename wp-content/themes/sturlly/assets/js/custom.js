@@ -263,7 +263,7 @@ jQuery(document).ready(function () {
             //Stop auto sliding
             //interval: false
             //Auto sliding, define time interval like 5000.
-            interval: 3600,
+            interval: 4600,
             pause: "false"
         });
         // jQuery(this).carousel('pause');
