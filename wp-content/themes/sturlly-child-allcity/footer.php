@@ -37,7 +37,7 @@ $csocial_intagram   = cs_get_option('csocial_intagram');
                         <div class="col-md-4">
                            <div class="contact-style1">
                               <ul class="icon-list">
-                                 <li class="lead"><button data-clipboard-text="03 9571 7000" class="copy-to-clipboard" title="Click to copy"><i class="fa fa-phone"></i>03 9571 7000</button></li>
+                                 <li class="lead"><button id ="cta-call-main" data-clipboard-text="03 9571 7000" class="copy-to-clipboard" title="Click to copy"><i class="fa fa-phone"></i>03 9571 7000</button></li>
                                  <li class="divider"></li>
                                  <li><a href="mailto:info@allcity.com.au"><i class="fa fa-envelope-o"></i>info@allcity.com.au</a></li>
                                  <li class="divider"></li>
