@@ -356,7 +356,8 @@ h2 {
 		}
 	}
 
-	#footer {
+	#footer,
+	.footer {
 		p {
 			text-align: center;
 
@@ -364,13 +365,18 @@ h2 {
 				font-size: small;
 			}
 		}
-		i {
-			color: #000;
-		}
-	}
-	.footer-social {
-		.footer .color-overlay & li a:hover i {
+		i:hover,
+		.color-overlay .footer-social li a:hover i {
 			color: $primary-color;
+		}
+		.footer-social {
+			a, i {
+				font-size: 32px;
+			}
+		}
+
+		.copy i {
+			color: #000;
 		}
 	}
 
