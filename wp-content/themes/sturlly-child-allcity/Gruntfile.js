@@ -37,6 +37,9 @@ var scripts = [
 
     childBase + 'js/vendor/clipboard.js',
     
+    childBase + 'js/vendor/photoswipe/photoswipe.js',
+    childBase + 'js/vendor/photoswipe/photoswipe-ui-default.js',
+    
     childBase + 'js/script.js'
 ];
 
@@ -88,7 +91,7 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'assets/css/style.min.css': 'assets/css/style-allcity.scss'
+          'assets/css/style.css': 'assets/css/style-allcity.scss'
         }
       }
     },
@@ -109,7 +112,7 @@ module.exports = function(grunt) {
     watch: {
       sass: { 
         files: ['assets/css/*.scss', 'assets/css/foundation/*', parentBase + 'scss/*.scss'], 
-        tasks: ['sass'] 
+        tasks: ['sass','cssmin'] 
       },
       scripts: { 
         files: ['assets/js/*.js', parentBase + 'js/*.js'], 

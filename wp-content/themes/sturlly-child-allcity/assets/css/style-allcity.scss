@@ -26,7 +26,9 @@ Template: sturlly
 @import '../../../sturlly/assets/scss/responsive';
 @import '../../../sturlly/assets/scss/pretty-photo';
 
-@import 'foundation/foundation.scss';
+@import 'foundation/foundation';
+
+@import 'photoswipe/main';
 
 /* ==========================================================================
 All City Styles
