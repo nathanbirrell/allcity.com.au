@@ -290,38 +290,33 @@ h2 {
 	}
 
 	#work {
-		.portfolio-style4 .portfolio-figure {
+		.grid li {
+			padding: 0;
+		}
+		.portfolio-allcity .portfolio-figure {
 			position: relative;
+			display: table;
 			margin: 0 auto;
 		    overflow: hidden;
-		    width: auto;
+		    width: 100%;
 		    height: 350px;
-		    // background-color: transparent;
 
 		    @media #{$small-only} {
 		    	max-width: 100%;
-		    	&:hover {
-		    		transform: none;
-					-webkit-transition: none;
-					-moz-transition: none;
-					transition: none;
-		    	}
-
-		    	& img {
-		    		filter: blur(1px) brightness(0.85);
-		    		-webkit-filter: blur(1px) brightness(0.85);
-		    		-moz-filter: blur(1px) brightness(0.85);
-		    		-ms-filter: blur(1px) brightness(0.85);
-		    		-o-filter: blur(1px) brightness(0.85);
-		    	}
-		    	figcaption {
-		    		opacity: 1;
-    				top: -57%;
-		    	}
 		    }
 
-		    & img {
-		    	height: 110%;
+	    	&:hover {
+	    		img {
+	    			filter: brightness(0.85);
+		    		-webkit-filter: brightness(0.85);
+		    		-moz-filter: brightness(0.85);
+		    		-ms-filter: brightness(0.85);
+		    		-o-filter: brightness(0.85);
+	    		}
+	    	}
+
+	    	& img {
+	    		height: 110%;
 			    min-height: 110%;
 			    width: auto;
 			    position: absolute;
@@ -330,15 +325,23 @@ h2 {
 			    top: -15px;
 			    left: -15px;
 			    max-width: none;
-		    }
+			    z-index: -1;
 
-		    figcaption {
-			    padding: 20px;
+	    		filter: blur(1px) brightness(0.80);
+	    		-webkit-filter: blur(1px) brightness(0.80);
+	    		-moz-filter: blur(1px) brightness(0.80);
+	    		-ms-filter: blur(1px) brightness(0.80);
+	    		-o-filter: blur(1px) brightness(0.80);
+	    	}
+
+	    	figcaption {
+	    		display: table-cell;
+			    text-align: center;
+			    vertical-align: middle;
+	    		opacity: 1;
 			    background: transparent;
 			    color: #fff;
 			    font-size: 26px;
-			    padding-top: 25%;
-			    text-align: center;
 			}
 		}
 	}

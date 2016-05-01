@@ -21,7 +21,7 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
     'orderby'         => 'ID',
   );
 
-  // $atts['portfolio_style'] = 'allcity'; //Force all city theme
+  $atts['portfolio_style'] = 'allcity'; //Force all city theme
 
   extract( shortcode_atts( $defaults, $atts ) );
 
