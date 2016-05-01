@@ -22,33 +22,36 @@ $gallery_images  = (!empty($post_options['pt_gallery'])) ? $post_options['pt_gal
 $image_array     = explode(',', $gallery_images);
 ?> 
 
-<?php if( ! empty( $gallery_images ) ) { ?>
+
 <li class="portfolio-item item col-md-3 col-sm-3 gallery <?php echo sanitize_html_classes($slug); ?> " data-rel="popup-<?php print $post->ID;?>">
-  <figure class="portfolio-figure gallery-thumb"> 
+  <figure class="portfolio-figure gallery-thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject"> 
     <?php if(has_post_thumbnail()) { 
-      $image_src_obj = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' );
+      $thumb_id = get_post_thumbnail_id( $post_id );
+      $image_src_obj = wp_get_attachment_image_src( $thumb_id, 'large' );
       $image_src = esc_url($image_src_obj[0]); 
       $image_width = $image_src_obj[1];
       $image_height = $image_src_obj[2];
+      $image_title = get_the_title($thumb_id);
       ?>
-      <a href="<?= $image_src ?>" title="" data-size="<?= $image_width ?>x<?= $image_height ?>"> <img src="<?= $image_src ?>" alt=""></a>
+      <a href="<?= $image_src ?>" title="" data-size="<?= $image_width ?>x<?= $image_height ?>"> <img src="<?= $image_src ?>" alt="<?= $image_title ?>" itemprop="thumbnail"></a>
     <?php } ?>
-      <figcaption itemprop="caption description" class="hidden"><?php the_title(); ?></figcaption>
+      <figcaption itemprop="caption description" class=""><?php the_title(); ?></figcaption>
   </figure>
 
-  <?php foreach( $image_array as $key => $image_id ) {
-      $image_src_obj  = wp_get_attachment_image_src( $image_id, 'large' );
-      $image_src = esc_url($image_src_obj[0]); 
-      $image_width = $image_src_obj[1];
-      $image_height = $image_src_obj[2];
-      $image_title = get_the_title($image_id);
-    ?>
-    <figure class="hidden" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
-      <a href="<?= $image_src ?>" title="<?= $image_title ?>" data-size="<?= $image_width ?>x<?= $image_height ?>">
-        <img src="<?= $image_src ?>" alt="<?= $image_title ?>">
-      </a>
-      <figcaption itemprop="caption description" class="hidden"><?php the_title(); ?></figcaption>
-    </figure>
+  <?php if( ! empty( $gallery_images ) ) { ?>
+    <?php foreach( $image_array as $key => $image_id ) {
+        $image_src_obj  = wp_get_attachment_image_src( $image_id, 'large' );
+        $image_src = esc_url($image_src_obj[0]); 
+        $image_width = $image_src_obj[1];
+        $image_height = $image_src_obj[2];
+        $image_title = get_the_title($image_id);
+      ?>
+      <figure class="hidden" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
+        <a href="<?= $image_src ?>" title="<?= $image_title ?>" data-size="<?= $image_width ?>x<?= $image_height ?>">
+          <img src="<?= $image_src ?>" alt="<?= $image_title ?>">
+        </a>
+        <figcaption itemprop="caption description" class="hidden"><?php the_title(); ?></figcaption>
+      </figure>
+    <?php } ?>
   <?php } ?>
 </li>
-<?php } ?>

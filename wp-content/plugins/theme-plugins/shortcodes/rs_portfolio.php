@@ -115,32 +115,6 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
 
   echo '</div>';
 
-  echo '
-
-<div class="gallery" itemscope="" itemtype="http://schema.org/ImageGallery">
-  <figure class="category-lead" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
-    <a href="http://tutsplus.github.io/photoswipe-jquery/img/office-1.jpg" itemprop="contentUrl" data-size="1000x667">
-      <img src="http://tutsplus.github.io/photoswipe-jquery/img/office-1-thumb.jpg" height="400" width="600" itemprop="thumbnail" alt="test">
-    </a>
-    <figcaption itemprop="caption description" class="hidden">Image caption</figcaption>
-  </figure>
-  <figure class="hidden" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
-    <a href="http://tutsplus.github.io/photoswipe-jquery/img/office-2.jpg" itemprop="contentUrl" data-size="1000x667">
-      <img src="http://tutsplus.github.io/photoswipe-jquery/img/office-2-thumb.jpg" height="400" width="600" itemprop="thumbnail" alt="test">
-    </a>
-    <figcaption itemprop="caption description" class="hidden">Image caption</figcaption>
-  </figure>
-  <figure class="hidden" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
-    <a href="http://tutsplus.github.io/photoswipe-jquery/img/office-3.jpg" itemprop="contentUrl" data-size="1000x667">
-      <img src="http://tutsplus.github.io/photoswipe-jquery/img/office-3-thumb.jpg" height="400" width="600" itemprop="thumbnail" alt="test">
-    </a>
-    <figcaption itemprop="caption description" class="hidden">Image caption</figcaption>
-  </figure>
-</div>
-
-
-  ';
-
   wp_reset_query();
   wp_reset_postdata();
   $wp_query = $tmp_query;

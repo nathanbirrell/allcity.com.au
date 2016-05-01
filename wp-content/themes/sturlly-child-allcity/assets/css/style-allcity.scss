@@ -284,7 +284,7 @@ h2 {
 		position: relative;
 		top: 0;
 
-		@media screen and (min-width: 480px) {
+		@media #{$small-up} {
 			min-height: 475px;
 		}
 	}
@@ -292,19 +292,54 @@ h2 {
 	#work {
 		.portfolio-style4 .portfolio-figure {
 			position: relative;
+			margin: 0 auto;
 		    overflow: hidden;
-		    width: 350px;
+		    width: auto;
 		    height: 350px;
+		    // background-color: transparent;
+
+		    @media #{$small-only} {
+		    	max-width: 100%;
+		    	&:hover {
+		    		transform: none;
+					-webkit-transition: none;
+					-moz-transition: none;
+					transition: none;
+		    	}
+
+		    	& img {
+		    		filter: blur(1px) brightness(0.85);
+		    		-webkit-filter: blur(1px) brightness(0.85);
+		    		-moz-filter: blur(1px) brightness(0.85);
+		    		-ms-filter: blur(1px) brightness(0.85);
+		    		-o-filter: blur(1px) brightness(0.85);
+		    	}
+		    	figcaption {
+		    		opacity: 1;
+    				top: -57%;
+		    	}
+		    }
 
 		    & img {
-		    	height: 100%;
-			    min-height: 100%;
+		    	height: 110%;
+			    min-height: 110%;
 			    width: auto;
 			    position: absolute;
-			    top: 0;
-			    left: 0;
+			    right: -15px;
+			    bottom: -15px;
+			    top: -15px;
+			    left: -15px;
 			    max-width: none;
 		    }
+
+		    figcaption {
+			    padding: 20px;
+			    background: transparent;
+			    color: #fff;
+			    font-size: 26px;
+			    padding-top: 25%;
+			    text-align: center;
+			}
 		}
 	}
 
