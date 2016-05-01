@@ -289,6 +289,25 @@ h2 {
 		}
 	}
 
+	#work {
+		.portfolio-style4 .portfolio-figure {
+			position: relative;
+		    overflow: hidden;
+		    width: 350px;
+		    height: 350px;
+
+		    & img {
+		    	height: 100%;
+			    min-height: 100%;
+			    width: auto;
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    max-width: none;
+		    }
+		}
+	}
+
 	#contact { // AKA the CTA section in our footer
 		background-color: $primary-color;
 

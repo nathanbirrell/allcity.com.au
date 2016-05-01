@@ -21,9 +21,9 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
     'orderby'         => 'ID',
   );
 
-  extract( shortcode_atts( $defaults, $atts ) );
+  // $atts['portfolio_style'] = 'allcity'; //Force all city theme
 
-  $atts['portfolio_style'] = 'all-city';
+  extract( shortcode_atts( $defaults, $atts ) );
 
   if( is_front_page() || is_home() ) {
     $paged = ( get_query_var('paged') ) ? intval( get_query_var('paged') ) : intval( get_query_var('page') );
@@ -86,30 +86,30 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
 
     $filter_args = wp_parse_args( $args, $filter_args );
 
-  // echo '<ul class="filters isotope-filters " >';
-  // echo '<li><a class="activbut" data-filter="*" href="#">all</a></li>';
-  // echo wp_list_categories( $filter_args );
-  // echo '</ul>';
+  echo '<ul class="filters isotope-filters " >';
+  echo '<li><a class="activbut" data-filter="*" href="#">all</a></li>';
+  echo wp_list_categories( $filter_args );
+  echo '</ul>';
 
   echo '<ul class="grid isotope row  animated izotope-container portfolio-'. $portfolio_style .' " style="position-relative; overflow:hidden;" >';
   echo '<div class="grid-sizer"></div>';
   
  	
   while( have_posts() ) : the_post();
-    get_template_part('templates/portfolio-styles/portfolio', $portfolio_style );
+    get_template_part('templates/portfolio-styles/portfolio', 'allcity' );
   endwhile;
  
   echo '</ul>';
   echo '</div>';
 
-  echo '<div class="popup-wrappers">';
-  while( have_posts() ) : the_post();
-    get_template_part('templates/portfolio-styles/portfolio', 'single' );
-  endwhile;
-  echo '<div class="popup-next"><span class="fa fa-angle-right"></span></div>';
-  echo '<div class="popup-prev"><span class="fa fa-angle-left"></span></div>';
-  echo '<div class="popup-close"></div>';
-  echo '</div>';
+  // echo '<div class="popup-wrappers">';
+  // while( have_posts() ) : the_post();
+  //   get_template_part('templates/portfolio-styles/portfolio', 'single' );
+  // endwhile;
+  // echo '<div class="popup-next"><span class="fa fa-angle-right"></span></div>';
+  // echo '<div class="popup-prev"><span class="fa fa-angle-left"></span></div>';
+  // echo '<div class="popup-close"></div>';
+  // echo '</div>';
 
 
 
