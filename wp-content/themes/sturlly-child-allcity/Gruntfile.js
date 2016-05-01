@@ -116,7 +116,7 @@ module.exports = function(grunt) {
       },
       scripts: { 
         files: ['assets/js/*.js', parentBase + 'js/*.js'], 
-        tasks: ['uglify'] 
+        tasks: ['uglify:dev'] 
       },
       grunt: {
         files: ['Gruntfile.js'],
