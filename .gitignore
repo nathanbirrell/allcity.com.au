@@ -102,7 +102,7 @@ node_modules/
 
 !snippets
 wp-content/plugins/*
-wp-content/plugins
+
 
 *.css.map
 *.js.map
@@ -110,3 +110,6 @@ wp-content/plugins
 *.min.css
 *.min.js
 wp-content/themes/sturlly-child-allcity/assets/css/style.css
+
+
+!wp-content/plugins/theme-plugins
