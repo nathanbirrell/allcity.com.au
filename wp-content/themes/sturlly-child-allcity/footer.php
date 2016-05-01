@@ -163,9 +163,8 @@ $csocial_intagram   = cs_get_option('csocial_intagram');
             </div>
 
         </div>
-
     </div>
-
 </div>
+
 </body>
 </html>
