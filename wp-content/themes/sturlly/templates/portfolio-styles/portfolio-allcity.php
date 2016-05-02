@@ -45,6 +45,8 @@ $image_array     = explode(',', $gallery_images);
         $image_width = $image_src_obj[1];
         $image_height = $image_src_obj[2];
         $image_title = get_the_title($image_id);
+
+        if ($image_id == get_post_thumbnail_id( $post_id )) {return;} // check for duplicate
       ?>
       <figure class="hidden" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
         <a href="<?= $image_src ?>" title="<?= $image_title ?>" data-size="<?= $image_width ?>x<?= $image_height ?>">
