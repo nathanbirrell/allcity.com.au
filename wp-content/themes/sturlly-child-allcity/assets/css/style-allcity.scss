@@ -503,7 +503,26 @@ h2 {
 // **************
 
 	.blog-details-title {
-		font-weight: 100;
+		font-weight: 400;
+	}
+
+	.blog-details-header-style1 .intro-section {
+	    margin: auto;
+	    padding: 10% 0 10%;
+	}
+
+	.blog-details-header {
+		background-color: #fefefe;
+
+		*,
+		.blog-title,
+		.blog-details-title {
+			color: #000;
+		}
+
+		.overlay-white {
+			background-color: rgba(255,255,255,.9);
+		}
 	}
 
 // **************

@@ -73,9 +73,9 @@
 <?php else: ?>
 
 <?php if(has_post_thumbnail() && !post_password_required()): ?>
-<div class="col-md-12">
+<!-- <div class="col-md-12">
   <div class="blog-image"><img src="<?php echo esc_url($image_url[0]); ?>" class="fadeIn blog-img" alt="" /></div>
-</div>
+</div> -->
 <?php endif; ?>
 
 <?php endif; ?>

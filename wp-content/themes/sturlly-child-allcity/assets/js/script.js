@@ -3,7 +3,11 @@ jQuery(document).ready(function() {
     // remove weird white text that gets set mysteriously
 	$('.work-count p.content-white').removeClass('content-white');
 
+	// youtube embed hack
 	$('.fluid-width-video-wrapper').css('padding-top', '0');
+
+	// hide a bunch of theme crap
+	$('.comments-main, .month, .medium.light-gray').hide();
 
 	var clipboard = new Clipboard('.copy-to-clipboard');
 
