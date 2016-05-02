@@ -51,7 +51,7 @@ function rs_service_box( $atts, $content = '' ){
     switch ($style) {
       case 'box_with_border_bottom':
         $output .= '<div '.$id.' class="work-count'.$class.'">';
-        $output .=  '<div class="work-count-box work-count-style1"> <span class="title-top"'.$big_heading_color.'>'.esc_html($big_heading).'</span> <span class="title"'.$small_heading_color.'>'.esc_html($small_heading).'</span>';
+        $output .=  '<div class="work-count-box work-count-style1"> <span class="title-top"'.$big_heading_color.'>'.esc_html($big_heading).'</span> <a href="' . esc_url($href). '" class="title"'.$small_heading_color.'>'.esc_html($small_heading).'</a>';
         $output .=  '<div class="black-line-top"></div>';
         $output .=  '<div class="black-line-bottom"></div>';
         $output .=  '<p class="content-white"'.$content_color.'>'.do_shortcode(wp_kses_data($content)).'</p>';

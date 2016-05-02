@@ -1504,7 +1504,7 @@ ul.children {clear: both;overflow: hidden;}
 /* Work Count Style 1 */
 .work-count-style1 .title-top { color: #000; font-size: 45px; font-weight: bold; margin: 0; font-family: 'Open Sans', sans-serif; }
 .work-count-style1 .content-white { width: 75%; }
-.work-count-style1 span.title { font-family: 'Open Sans', sans-serif; font-size: 35px; font-weight: 300; color: #FFF; display: table; text-transform: uppercase; line-height: 23px; margin: 15px 0 0 0; }
+.work-count-style1 .title { font-family: 'Open Sans', sans-serif; font-size: 35px; font-weight: 300; color: #FFF; display: table; text-transform: uppercase; line-height: 23px; margin: 15px 0 0 0; }
 
 /* Work Count Style 2 */
 .work-count-style2 { text-align: center;}
