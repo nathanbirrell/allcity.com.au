@@ -8,7 +8,7 @@ jQuery(document).ready(function() {
 	var clipboard = new Clipboard('.copy-to-clipboard');
 
 	clipboard.on('success', function(e) {
-	    // add alert here
+	    $('.success.callout').removeClass('hidden').show().delay(3500).fadeOut();
 	});
 
 

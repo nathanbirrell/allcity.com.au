@@ -30,8 +30,7 @@ if( !function_exists('st_site_menu')) {
 
     echo '</ul>
           <div class-"ctas">
-              <a id="cta-call-nav" href="tel:0395717000" title="Call us to get a quote on your Kitchen or Bathroom projects" target="_self" class="small-button float-right cta phone">03 9571 7000</a>
-              <a id="cta-get-quote" href="#contact" title="Contact us to get a quote on your Kitchen or Bathroom projects" target="_self" class="small-button float-right cta">Get your free quote</a>
+              <a id="cta-get-quote" href="#contact" title="Contact us to get a quote on your Kitchen or Bathroom projects" target="_self" class="small-button float-right cta">Book a Consultation</a>
           </div>
         </div>
       </div>';

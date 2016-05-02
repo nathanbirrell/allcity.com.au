@@ -37,6 +37,9 @@ var scripts = [
 
     childBase + 'js/vendor/clipboard.js',
     
+    childBase + 'js/vendor/foundation.js',
+    childBase + 'js/vendor/foundation/*.js',
+    
     // childBase + '../node_modules/photoswipe/dist/photoswipe.js',
     // childBase + '../node_modules/photoswipe/dist/photoswipe-ui-default.js',
     
