@@ -50,7 +50,7 @@ $image_array     = explode(',', $gallery_images);
         <a href="<?= $image_src ?>" title="<?= $image_title ?>" data-size="<?= $image_width ?>x<?= $image_height ?>">
           <img src="<?= $image_src ?>" alt="<?= $image_title ?>">
         </a>
-        <figcaption itemprop="caption description" class="hidden"><?php the_title(); ?></figcaption>
+        <figcaption itemprop="caption description" class="hidden"><?php the_title(); ?> - <?= $image_title ?></figcaption>
       </figure>
     <?php } ?>
   <?php } ?>
