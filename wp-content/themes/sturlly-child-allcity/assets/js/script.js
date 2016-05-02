@@ -15,13 +15,29 @@ jQuery(document).ready(function() {
 	    $('.success.callout').removeClass('hidden').show().delay(3500).fadeOut();
 	});
 
+	$('#blog-details img').each(function() {
+		var $link = $(this).closest('a');
+		var $img = $(this);
+
+		$link.attr('data-size', $img.width() + 'x' + $img.height());
+		$link.attr('itemprop', 'thumbnail');
+		// $link.append('<figcaption itemprop="caption description"</figcaption>');
+		$link.wrap('<figure class=\"\" itemprop=\"associatedMedia\" itemscope=\"\" itemtype=\"http://schema.org/ImageObject\"> </figure>');
+	});
+
 
 	var initPhotoSwipeFromDOM = function(gallerySelector) {
+		var thumbEls;
+		if ($('#blog-details').length > -1) {
+			thumbEls = $('figure'); // handle blog page gallery differently
+		} else {
+			thumbEls = el.childNodes;
+		}
 
 	    // parse slide data (url, title, size ...) from DOM elements 
 	    // (children of gallerySelector)
 	    var parseThumbnailElements = function(el) {
-	        var thumbElements = el.childNodes,
+	        var thumbElements = thumbEls,
 	            numNodes = thumbElements.length,
 	            items = [],
 	            figureEl,

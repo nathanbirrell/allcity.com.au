@@ -43,7 +43,7 @@ endif;
 <section id="blog-details" <?php post_class('blog-details white-bg blog-page'); ?>>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 col-sm-12 left">
+            <div class="col-md-8 col-md-offset-2 col-md-8">
                 <div class="blog-listing">
                     <?php
                       while ( have_posts() ) : the_post();
@@ -52,7 +52,7 @@ endif;
                     ?>
 
                     <div class="col-md-12 blog-content">
-                      <article class="contentarea">
+                      <article class="contentarea gallery">
                         <?php the_content(); ?>
                       </article>
                     </div>
