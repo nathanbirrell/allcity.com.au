@@ -27,16 +27,16 @@ jQuery(document).ready(function() {
 
 
 	var initPhotoSwipeFromDOM = function(gallerySelector) {
-		var thumbEls;
-		if ($('#blog-details').length > -1) {
-			thumbEls = $('figure'); // handle blog page gallery differently
-		} else {
-			thumbEls = el.childNodes;
-		}
-
 	    // parse slide data (url, title, size ...) from DOM elements 
 	    // (children of gallerySelector)
 	    var parseThumbnailElements = function(el) {
+	    	var thumbEls;
+			if ($('#blog-details').length > 0) {
+				thumbEls = $('figure'); // handle blog page gallery differently
+			} else {
+				thumbEls = el.childNodes;
+			}
+
 	        var thumbElements = thumbEls,
 	            numNodes = thumbElements.length,
 	            items = [],
