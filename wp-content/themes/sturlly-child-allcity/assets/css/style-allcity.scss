@@ -56,6 +56,10 @@ h2 {
 	line-height: 1.4;
 }
 
+button {
+	background: transparent;
+}
+
 // **************
 // Header styles and overrides
 // **************
@@ -417,10 +421,12 @@ h2 {
 
 			    &,
 			    i {
-			    	@include font-size(22px, 30px);
+			    	@include font-size(18px, 24px);
 			    }
+			}
 
-			    #cta-call-main {
+			li.phone {
+				#cta-call-main {
 		    		display: none;
 		    	}
 				#cta-call-main-mob {
@@ -547,4 +553,31 @@ h2 {
 
 	.testimonial .carousel-caption {
 		color: #fff;
+	}
+
+
+// **************
+// Globals
+// **************
+
+.divider-dark {
+    background-color: transparent;
+}
+hr.space {
+	border: none;
+}
+
+// **************
+// Mailchimp contact form
+// **************
+
+// it's in an iframe so this don't work mate
+	.modalContent {
+		div#uniqName_3_1, div#uniqName_3_2 {
+		    width: 50%;
+		    display: inline-block;
+		}
+		div#uniqName_3_1 {
+			padding-right: 15px;
+		}
 	}

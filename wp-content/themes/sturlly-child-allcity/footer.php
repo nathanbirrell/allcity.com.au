@@ -43,13 +43,16 @@ $csocial_intagram   = cs_get_option('csocial_intagram');
                                 </button> -->
                               </div>
                               <ul class="icon-list">
-                                 <li class="lead">
+                                <li class="lead mailchimp-popup" id="cta-arrange-consultation"><button>Arrange a Consultation</button></li>
+                                <li class="divider"></li>
+                                 <li class="phone">
                                     <button id ="cta-call-main" data-clipboard-text="03 9571 7000" class="copy-to-clipboard" title="Click to copy"><i class="fa fa-phone"></i>03 9571 7000</button>
                                     <a id ="cta-call-main-mob" href="tel:0395717000" class="cta-contact-call" title="Call the All City showroom"><i class="fa fa-phone"></i>03 9571 7000</a>
                                  </li>
                                  <li class="divider"></li>
                                  <li><a href="mailto:info@allcity.com.au"><i class="fa fa-envelope-o"></i>info@allcity.com.au</a></li>
                                  <li class="divider"></li>
+                                 <li><a href="https://www.google.com.au/maps/place/All+City+Bathrooms+%26+Kitchens/@-37.8796416,145.0695946,15z" target="_blank"><i class="fa fa-map-marker"></i>Visit the Showroom</a></li>
                               </ul>
                            </div>
                         </div>
@@ -174,6 +177,9 @@ $csocial_intagram   = cs_get_option('csocial_intagram');
         </div>
     </div>
 </div>
+
+<!-- Mailchimp include -->
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 
 </body>
 </html>

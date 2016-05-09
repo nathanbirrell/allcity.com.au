@@ -25,6 +25,14 @@ jQuery(document).ready(function() {
 		$link.wrap('<figure class=\"\" itemprop=\"associatedMedia\" itemscope=\"\" itemtype=\"http://schema.org/ImageObject\"> </figure>');
 	});
 
+	var showMailchimpPopUp = function () {
+		require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us13.list-manage.com","uuid":"41ab846cc22bcc6e712d0b1e6","lid":"249b7236b0"}) })
+		document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+	};
+	$('.mailchimp-popup').click(function() {
+		showMailchimpPopUp();
+	});
+
 
 	var initPhotoSwipeFromDOM = function(gallerySelector) {
 	    // parse slide data (url, title, size ...) from DOM elements 

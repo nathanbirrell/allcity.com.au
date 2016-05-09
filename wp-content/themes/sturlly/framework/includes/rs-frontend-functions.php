@@ -30,7 +30,7 @@ if( !function_exists('st_site_menu')) {
 
     echo '</ul>
           <div class-"ctas">
-              <a id="cta-get-quote" href="#contact" title="Contact us to get a quote on your Kitchen or Bathroom projects" target="_self" class="small-button float-right cta">Book a Consultation</a>
+              <a id="cta-get-quote" href="#contact" title="Contact us to get a quote on your Kitchen or Bathroom projects" target="_self" class="small-button float-right cta mailchimp-popup">Book a Consultation</a>
           </div>
         </div>
       </div>';
