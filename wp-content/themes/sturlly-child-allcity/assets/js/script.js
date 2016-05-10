@@ -246,5 +246,15 @@ jQuery(document).ready(function() {
 	// execute above function
 	initPhotoSwipeFromDOM('.gallery');
 
-    
+	var ga = __gaTracker;
+
+    // Analytics 
+    $('#cta-get-quote').click(function() {
+    	var dimensionValue = 'CTA_HEADER_GET_CONSULTATION';
+		ga('set', 'dimension1', dimensionValue);
+    });
+    $('#cta-arrange-consultation').click(function() {
+    	var dimensionValue = 'CTA_MAIN_GET_CONSULTATION';
+		ga('set', 'dimension2', dimensionValue);
+    }); 
 });
