@@ -26,7 +26,10 @@ Template: sturlly
 @import '../../../sturlly/assets/scss/responsive';
 @import '../../../sturlly/assets/scss/pretty-photo';
 
-@import 'foundation/foundation.scss';
+@import 'foundation/foundation';
+
+// @import '../vendor/photoswipe/photoswipe.css';
+// @import '../vendor/photoswipe/default-skin/default-skin.css';
 
 /* ==========================================================================
 All City Styles
@@ -51,6 +54,10 @@ h1 {
 
 h2 {
 	line-height: 1.4;
+}
+
+button {
+	background: transparent;
 }
 
 // **************
@@ -107,6 +114,8 @@ h2 {
 			@media #{$medium-up} {
 				display: block;
 				width: auto;
+				padding: 7px 20px;
+    			font-size: 14px;
 			}
 		}
 
@@ -136,6 +145,22 @@ h2 {
 				.collapse-navation {
 					margin-top: 0;
 				}
+			}
+		}
+
+		@media #{$large-up} {
+			.logo-dark, .logo-white {
+			    height: 62px;
+			}
+			
+			.navbar-default .navbar-nav>li>a, 
+			.navbar-default .navbar-nav>li>a {
+			    font-size: 16px;
+			    font-weight: 400;
+			}
+			
+			ul.nav.navbar-nav.navbar-left.navbar-blue {
+				margin-top: 6px;
 			}
 		}
 	}
@@ -281,8 +306,66 @@ h2 {
 		position: relative;
 		top: 0;
 
-		@media screen and (min-width: 480px) {
+		@media #{$small-up} {
 			min-height: 475px;
+		}
+	}
+
+	#work {
+		.grid li {
+			padding: 0;
+		}
+		.portfolio-allcity .portfolio-figure {
+			position: relative;
+			display: table;
+			margin: 0 auto;
+		    overflow: hidden;
+		    width: 100%;
+		    height: 350px;
+
+		    @media #{$small-only} {
+		    	max-width: 100%;
+		    }
+
+	    	&:hover {
+	    		img {
+	    			filter: brightness(0.85);
+		    		-webkit-filter: brightness(0.85);
+		    		-moz-filter: brightness(0.85);
+		    		-ms-filter: brightness(0.85);
+		    		-o-filter: brightness(0.85);
+	    		}
+	    	}
+
+	    	& img {
+			    min-height: 110%;
+			    min-width: 100%;
+			    height: 110%;
+			    width: auto;
+			    position: absolute;
+			    right: -15px;
+			    bottom: -15px;
+			    top: -15px;
+			    left: -15px;
+			    max-width: none;
+			    z-index: -1;
+
+	    		filter: blur(1px) brightness(0.80);
+	    		-webkit-filter: blur(1px) brightness(0.80);
+	    		-moz-filter: blur(1px) brightness(0.80);
+	    		-ms-filter: blur(1px) brightness(0.80);
+	    		-o-filter: blur(1px) brightness(0.80);
+	    	}
+
+	    	figcaption {
+	    		display: table-cell;
+			    text-align: center;
+			    vertical-align: middle;
+	    		opacity: 1;
+			    background: transparent;
+			    color: #fff;
+			    font-size: 26px;
+			}
 		}
 	}
 
@@ -305,7 +388,7 @@ h2 {
 		}
 
 		a,
-		button {
+		button#cta-call-main {
 			background: transparent;
 			width: 100%;
 			height: 100%;
@@ -338,8 +421,47 @@ h2 {
 
 			    &,
 			    i {
-			    	@include font-size(22px, 30px);
+			    	@include font-size(18px, 24px);
 			    }
+			}
+
+			li.phone {
+				#cta-call-main {
+		    		display: none;
+		    	}
+				#cta-call-main-mob {
+					display: block;
+				}
+
+			    @media #{$medium-up} {
+			    	#cta-call-main {
+			    		display: block;
+			    	}
+					#cta-call-main-mob {
+						display: none;
+					}
+			    }
+			}
+		}
+
+		.callout.success {
+			background-color: rgba(255,255,255,0.3);
+			text-align: center;
+
+			p {
+				margin: 0;
+			    margin-right: 22px;
+			}
+
+			.close-button {
+			    position: absolute;
+			    color: #8a8a8a;
+			    right: 1rem;
+			    top: 0.75rem;
+			    font-size: 2em;
+			    line-height: 1;
+			    cursor: pointer;
+			    background-color: transparent;
 			}
 		}
 
@@ -353,6 +475,9 @@ h2 {
 		.pt-0-pb-65 {
 		    padding-top: 0;
 		    padding-bottom: 35px;
+		}
+		ol, ul {
+		    margin-left: 0;
 		}
 	}
 
@@ -385,7 +510,35 @@ h2 {
 // **************
 
 	.blog-details-title {
-		font-weight: 100;
+		font-weight: 400;
+	}
+
+	.blog-details-header-style1 .intro-section {
+	    margin: auto;
+	    padding: 10% 0 10%;
+	}
+
+	.blog-details-header {
+		background-color: #fefefe;
+
+		*,
+		.blog-title,
+		.blog-details-title {
+			color: #000;
+		}
+
+		.overlay-white {
+			background-color: rgba(255,255,255,.8);
+		}
+	}
+
+	#blog-details {
+		quote {
+			font-size: x-large;
+	    	font-style: italic;
+	    	margin-bottom: 55px;
+	    	display: block;
+	    }
 	}
 
 // **************
@@ -400,4 +553,31 @@ h2 {
 
 	.testimonial .carousel-caption {
 		color: #fff;
+	}
+
+
+// **************
+// Globals
+// **************
+
+.divider-dark {
+    background-color: transparent;
+}
+hr.space {
+	border: none;
+}
+
+// **************
+// Mailchimp contact form
+// **************
+
+// it's in an iframe so this don't work mate
+	.modalContent {
+		div#uniqName_3_1, div#uniqName_3_2 {
+		    width: 50%;
+		    display: inline-block;
+		}
+		div#uniqName_3_1 {
+			padding-right: 15px;
+		}
 	}

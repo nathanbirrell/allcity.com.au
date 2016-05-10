@@ -11,10 +11,15 @@ function sturlly_parent_styles() {
 	$parent = wp_get_theme($parent);
 
 	wp_enqueue_style( 'sturlly', get_template_directory_uri() . '/style.css', array(), $parent['Version'], 'all');
-	
+    	
 	wp_enqueue_style('allcity-style', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array());
 
-	wp_enqueue_script('allcity-script', get_stylesheet_directory_uri() . '/assets/js/script.min.js', array(), false, true);
+    wp_enqueue_script('allcity-script', get_stylesheet_directory_uri() . '/assets/js/script.min.js', array(), false, true);
+
+    wp_enqueue_style('photoswipe-style', get_stylesheet_directory_uri() . '/assets/vendor/photoswipe/photoswipe.css', array());
+    wp_enqueue_style('photoswipe-skin-style', get_stylesheet_directory_uri() . '/assets/vendor/photoswipe/default-skin/default-skin.css', array());
+    wp_enqueue_script('photoswipe', get_stylesheet_directory_uri() . '/assets/vendor/photoswipe/photoswipe.min.js', array(), false, true);
+	wp_enqueue_script('photoswipe-ui-default', get_stylesheet_directory_uri() . '/assets/vendor/photoswipe/photoswipe-ui-default.min.js', array('photoswipe'), false, true);
 
 	wp_localize_script('allcity-script', 'rs_ajax',
       array(

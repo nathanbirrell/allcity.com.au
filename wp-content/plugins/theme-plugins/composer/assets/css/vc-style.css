@@ -1,0 +1,270 @@
+@charset "utf-8";
+/* CSS Document */
+.vc_icon_box {
+  background-image:url(font-awesome.png)!important;;
+}
+.icon_box .wpb_element_wrapper {
+  background-image: url(font-awesome.png)!important;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#icon-dropdown i{
+  font-size: 24px;
+  padding: 7px;
+  margin: 0 !important;
+}
+#icon-dropdown {
+  border: 1px solid #C7C7C7;
+  width: 100%;
+  height: 160px;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: 10px 0px;
+}
+#icon-dropdown input#trace {
+  display:none;
+}
+#icon-dropdown li:hover {
+  background: #1E8CBE;
+  color: #FFF;
+}
+#icon-dropdown li.selected {
+  color: #FFF;
+  background:#313131;
+}
+.icon-preview {
+  display: inline-block;
+  width: 40px;
+  height: 35px;
+  text-align: center;
+}
+.icon-preview > i {
+  font-size:28px;
+  vertical-align: middle;
+}
+.wpb_element_label {
+  margin-right: 15px;
+  line-height: 30px;
+}
+.search {
+  padding: 5px;
+  margin-left: 50px;
+  width: 150px;
+  border-color: #C7C7C7 !important;
+}
+#icon-dropdown > .icon-list {
+  margin-top: 0px;
+  background-image: none !important;
+  width: 100% !important;
+  padding: 0px;
+}
+#icon-dropdown > .icon-list li {
+  display: inline-block;
+  padding: 0px 5px;
+  cursor: pointer;
+  border: 1px solid #DDD;
+  margin-bottom: 0px;
+  width: 40px;
+  text-align: center;
+}
+#icon-dropdown > .icon-list label {
+  display: none;
+}
+#icon-dropdown li.selected:hover {
+  color: #FFF;
+  background:#313131;
+}
+.wpb_el_type_icon .search {
+  max-width: 220px;
+  margin-left: 12px !important;
+}
+#wp-link-update {
+  position: absolute;
+  right: 6px;
+  width: 70px;
+  height: 28px;
+  overflow: hidden;
+}
+.wpb_vc_param_value.pos.radioimage {
+  position: absolute;
+  width: 10px;
+  float: left;
+  margin: 0px 10px;
+}
+img.radioimage {
+  margin-left: 32px;
+  border: 1px solid;
+  max-height: 70px;
+  max-width: 170px;
+}
+/**
+ * Element Icons
+ */
+
+.vc_helper .vc_element-icon.fa,
+.wpb_content_element > .wpb_element_wrapper > .wpb_element_title .vc_element-icon.fa{
+  background-image: none;
+  text-align: center;
+  line-height: 32px;
+  font-size: 14px;
+  border-radius: 32px;
+  color: #fff;
+  background: #2b2b2b;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.vc_helper .vc_element-icon.fa{
+  color: #afd23e;
+  background: #fff;
+}
+
+/**
+ * VC Bootstrap Five Columns
+ */
+.vc_col-md-five{
+  width: 20%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.vc_no_top_padding{
+  padding-top: 0 !important;
+}
+
+/**
+ * Add Element Modal
+ */
+.wpb-elements-list-modal .vc_element-icon.fa {
+  background-image: none;
+  text-align: center;
+  line-height: 32px;
+  font-size: 14px;
+  border-radius: 32px;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.wpb-elements-list-modal .wpb-content-layouts li{
+  width: 200px;
+}
+
+.wpb-elements-list-modal .wpb-content-layouts a{
+  width: 100%;
+}
+
+.vc_shortcodes_container > .wpb_element_wrapper > .vc_container_for_children{
+  margin: 0 10px; 
+  padding: 10px; 
+}
+
+/**
+ * Nested Shortcodes
+ */
+.vc_shortcodes_container{
+  position: relative;
+}
+
+.vc_shortcodes_container > .controls_column{
+  height: 32px;
+  padding: 6px;
+}
+
+.vc_shortcodes_container .rs-container-title {
+  text-align: right;
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  z-index: 0;
+}
+
+.rs-label {
+  background: #333;
+  color:#f0f0f0;
+  padding:2px 4px;
+  font-size:11px;
+  border-radius: 1px;
+
+}
+
+.wpb_rs_intro_slide .vc_container_for_children {display: none;}
+
+
+/**
+ * Fix Tabs Issue
+ */
+.wpb_vc_tabs > .wpb_element_wrapper .ui-tabs .ui-tabs-nav li.add_tab_block{
+  padding: 10px;
+}
+
+/**
+ * Composer Switch
+ */
+.wpb_switch-to-composer{
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/**
+ * display:none for uneccessary things
+ */
+.wpb_rs_cta .add_tab_block,
+.vc_navbar-header,
+.wpb-content-layouts-container > li:first-child{
+  display: none;
+}
+
+
+/**
+ * VC UPLOAD
+ */
+.wpb_el_type_vc_efa_upload .cs-button-remove,
+.wpb_el_type_vc_efa_upload .cs-add-media{
+  height: 32px;
+  line-height: 32px;
+  margin-left: 5px;
+}
+
+/**
+ * VC IMAGE SELECT
+ */
+.wpb_edit_form_elements .vc_image_select{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wpb_edit_form_elements .vc_image_select li {
+  display: inline-block;
+  padding: 5px 5px 5px 0;
+  cursor: pointer;
+}
+.wpb_edit_form_elements .vc_image_select li img {
+  vertical-align: bottom;
+  border: 3px solid #e1e1e1;
+}
+.wpb_edit_form_elements .vc_image_select li.selected img {
+  border: 3px solid #444;
+}
+
+
+.wpb_edit_form_elements .vc-tabs > ul li a:focus{
+  box-shadow: none;
+}
+.metabox-composer-content a{
+  outline: none;
+}
+
+/**
+ * UI Fixes
+ */
+.vc_shortcodes_container .wpb_content_element > .wpb_element_wrapper,
+.wpb_vc_accordion .wpb_content_element > .wpb_element_wrapper,
+.wpb_vc_tabs .wpb_content_element > .wpb_element_wrapper,
+.wpb_vc_row_inner .wpb_content_element > .wpb_element_wrapper{
+  border: 1px solid #f2f2f2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.025);
+}
+

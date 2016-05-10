@@ -24,7 +24,7 @@ $csocial_intagram   = cs_get_option('csocial_intagram');
          <div class="row contact-us">
             <div class="col-md-12">
                <div class="title-style2 title-text">
-                  <h2 class="title text-center">Get a free consultation today</h2>
+                  <h2 class="title text-center">Book your free consultation today</h2>
                   <div class="green-line"></div>
                </div>
                <div class="text-center title-style2 clear-both">
@@ -36,11 +36,23 @@ $csocial_intagram   = cs_get_option('csocial_intagram');
                         <div class="col-md-4 col-sm-6 no-padding"></div>
                         <div class="col-md-4">
                            <div class="contact-style1">
+                              <div class="success callout hidden" data-closable>
+                                <p>Copied to clipboard</p>
+                                <!-- <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                                  <span aria-hidden="true">&times;</span>
+                                </button> -->
+                              </div>
                               <ul class="icon-list">
-                                 <li class="lead"><button id ="cta-call-main" data-clipboard-text="03 9571 7000" class="copy-to-clipboard" title="Click to copy"><i class="fa fa-phone"></i>03 9571 7000</button></li>
+                                <li class="lead mailchimp-popup" id="cta-arrange-consultation"><button>Arrange a Consultation</button></li>
+                                <li class="divider"></li>
+                                 <li class="phone">
+                                    <button id ="cta-call-main" data-clipboard-text="03 9571 7000" class="copy-to-clipboard" title="Click to copy"><i class="fa fa-phone"></i>03 9571 7000</button>
+                                    <a id ="cta-call-main-mob" href="tel:0395717000" class="cta-contact-call" title="Call the All City showroom"><i class="fa fa-phone"></i>03 9571 7000</a>
+                                 </li>
                                  <li class="divider"></li>
                                  <li><a href="mailto:info@allcity.com.au"><i class="fa fa-envelope-o"></i>info@allcity.com.au</a></li>
                                  <li class="divider"></li>
+                                 <li><a href="https://www.google.com.au/maps/place/All+City+Bathrooms+%26+Kitchens/@-37.8796416,145.0695946,15z" target="_blank"><i class="fa fa-map-marker"></i>Visit the Showroom</a></li>
                               </ul>
                            </div>
                         </div>
@@ -99,5 +111,75 @@ $csocial_intagram   = cs_get_option('csocial_intagram');
 
 </div><!--end of main-->
 <?php wp_footer(); ?>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Mailchimp include -->
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+
 </body>
 </html>
