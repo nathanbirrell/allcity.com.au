@@ -115,6 +115,8 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
 
   echo '</div>';
 
+  echo file_get_contents(__DIR__ . "/../../../themes/sturlly-child-allcity/includes/cta-footer.php");
+
   wp_reset_query();
   wp_reset_postdata();
   $wp_query = $tmp_query;
