@@ -250,11 +250,19 @@ jQuery(document).ready(function() {
 
     // Analytics 
     $('#cta-get-quote').click(function() {
-    	var dimensionValue = 'CTA_HEADER_GET_CONSULTATION';
-		ga('set', 'dimension1', dimensionValue);
+		ga('send', {
+		  hitType: 'event',
+		  eventCategory: 'CTAs',
+		  eventAction: 'click',
+		  eventLabel: 'CTA Header'
+		});
     });
     $('#cta-arrange-consultation').click(function() {
-    	var dimensionValue = 'CTA_MAIN_GET_CONSULTATION';
-		ga('set', 'dimension2', dimensionValue);
+		ga('send', {
+		  hitType: 'event',
+		  eventCategory: 'CTAs',
+		  eventAction: 'click',
+		  eventLabel: 'CTA Footer'
+		});
     }); 
 });
