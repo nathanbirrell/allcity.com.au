@@ -32,7 +32,13 @@
                                  <li class="divider"></li>
                                  <li><a href="mailto:info@allcity.com.au"><i class="fa fa-envelope-o"></i>info@allcity.com.au</a></li>
                                  <li class="divider"></li>
-                                 <li><a href="https://www.google.com.au/maps/place/All+City+Bathrooms+%26+Kitchens/@-37.8796416,145.0695946,15z" target="_blank"><i class="fa fa-map-marker"></i>Visit the Showroom</a></li>
+                                 <li>
+                                   <a href="https://goo.gl/maps/arnNrUny3dq" target="_blank">
+                                     <i class="fa fa-map-marker"></i> 
+                                     <span class="cta-address">516 Waverley Road,<br>
+                                     Malvern East, VIC 3145</span>
+                                   </a>
+                                 </li>
                               </ul>
                            </div>
                         </div>
