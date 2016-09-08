@@ -41,7 +41,7 @@ $csocial_intagram   = cs_get_option('csocial_intagram');
             </div>
 
 
-           <div class="contact-style1">
+           <!-- <div class="contact-style1">
               <div class="head">
                  <span class="contact-title"></span>
                  <p class="content contact-text"></p>
@@ -51,7 +51,7 @@ $csocial_intagram   = cs_get_option('csocial_intagram');
                  </a></p>
                  <p></p>
               </div>
-           </div>
+           </div> -->
 
             <div class="row os-animation" data-os-animation="">
                 <p class="text-center copy"><?php echo wp_kses_post(cs_get_option('copyright_text')); ?><i class="fa fa-code"></i> built by <a href="http://nathanbirrell.me/" target="_blank">Nathan Birrell</a></p>
