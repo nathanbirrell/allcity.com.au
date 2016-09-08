@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-    
+
     // remove weird white text that gets set mysteriously
 	$('.work-count p.content-white').removeClass('content-white');
 
@@ -15,15 +15,15 @@ jQuery(document).ready(function() {
 	    $('.success.callout').removeClass('hidden').show().delay(3500).fadeOut();
 	});
 
-	$('#blog-details img').each(function() {
-		var $link = $(this).closest('a');
-		var $img = $(this);
-
-		$link.attr('data-size', $img.width() + 'x' + $img.height());
-		$link.attr('itemprop', 'thumbnail');
-		// $link.append('<figcaption itemprop="caption description"</figcaption>');
-		$link.wrap('<figure class=\"\" itemprop=\"associatedMedia\" itemscope=\"\" itemtype=\"http://schema.org/ImageObject\"> </figure>');
-	});
+	// $('#blog-details img').each(function() {
+	// 	var $link = $(this).closest('a');
+	// 	var $img = $(this);
+  //
+	// 	$link.attr('data-size', $img.width() + 'x' + $img.height());
+	// 	$link.attr('itemprop', 'thumbnail');
+	// 	// $link.append('<figcaption itemprop="caption description"</figcaption>');
+	// 	$link.wrap('<figure class=\"\" itemprop=\"associatedMedia\" itemscope=\"\" itemtype=\"http://schema.org/ImageObject\"> </figure>');
+	// });
 
 	var showMailchimpPopUp = function () {
 		require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us13.list-manage.com","uuid":"41ab846cc22bcc6e712d0b1e6","lid":"249b7236b0"}) })
@@ -35,15 +35,15 @@ jQuery(document).ready(function() {
 
 
 	var initPhotoSwipeFromDOM = function(gallerySelector) {
-	    // parse slide data (url, title, size ...) from DOM elements 
+	    // parse slide data (url, title, size ...) from DOM elements
 	    // (children of gallerySelector)
 	    var parseThumbnailElements = function(el) {
 	    	var thumbEls;
-			if ($('#blog-details').length > 0) {
-				thumbEls = $('figure'); // handle blog page gallery differently
-			} else {
+			// if ($('#blog-details').length > 0) {
+			// 	thumbEls = $('figure'); // handle blog page gallery differently
+			// } else {
 				thumbEls = el.childNodes;
-			}
+			// }
 
 	        var thumbElements = thumbEls,
 	            numNodes = thumbElements.length,
@@ -57,7 +57,7 @@ jQuery(document).ready(function() {
 
 	            figureEl = thumbElements[i]; // <figure> element
 
-	            // include only element nodes 
+	            // include only element nodes
 	            if(figureEl.nodeType !== 1) {
 	                continue;
 	            }
@@ -77,13 +77,13 @@ jQuery(document).ready(function() {
 
 	            if(figureEl.children.length > 1) {
 	                // <figcaption> content
-	                item.title = figureEl.children[1].innerHTML; 
+	                item.title = figureEl.children[1].innerHTML;
 	            }
 
 	            if(linkEl.children.length > 0) {
 	                // <img> thumbnail element, retrieving thumbnail url
 	                item.msrc = linkEl.children[0].getAttribute('src');
-	            } 
+	            }
 
 	            item.el = figureEl; // save link to element for getThumbBoundsFn
 	            items.push(item);
@@ -122,8 +122,8 @@ jQuery(document).ready(function() {
 	            index;
 
 	        for (var i = 0; i < numChildNodes; i++) {
-	            if(childNodes[i].nodeType !== 1) { 
-	                continue; 
+	            if(childNodes[i].nodeType !== 1) {
+	                continue;
 	            }
 
 	            if(childNodes[i] === clickedListItem) {
@@ -156,10 +156,10 @@ jQuery(document).ready(function() {
 	            if(!vars[i]) {
 	                continue;
 	            }
-	            var pair = vars[i].split('=');  
+	            var pair = vars[i].split('=');
 	            if(pair.length < 2) {
 	                continue;
-	            }           
+	            }
 	            params[pair[0]] = pair[1];
 	        }
 
@@ -188,7 +188,7 @@ jQuery(document).ready(function() {
 	                // See Options -> getThumbBoundsFn section of documentation for more info
 	                var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
 	                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-	                    rect = thumbnail.getBoundingClientRect(); 
+	                    rect = thumbnail.getBoundingClientRect();
 
 	                return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
 	            }
@@ -198,7 +198,7 @@ jQuery(document).ready(function() {
 	        // PhotoSwipe opened from URL
 	        if(fromURL) {
 	            if(options.galleryPIDs) {
-	                // parse real index when custom PIDs are used 
+	                // parse real index when custom PIDs are used
 	                // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
 	                for(var j = 0; j < items.length; j++) {
 	                    if(items[j].pid == index) {
@@ -248,7 +248,7 @@ jQuery(document).ready(function() {
 
 	var ga = __gaTracker;
 
-    // Analytics 
+    // Analytics
     $('#cta-get-quote').click(function() {
 		ga('send', {
 		  hitType: 'event',
@@ -264,5 +264,5 @@ jQuery(document).ready(function() {
 		  eventAction: 'click',
 		  eventLabel: 'CTA Footer'
 		});
-    }); 
+    });
 });

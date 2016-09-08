@@ -15,9 +15,9 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
   $defaults = array(
     'id'              => '',
     'class'           => '',
-    'cats'            => '',
+    'cats'            => '', // here you can use a comma delimited list of category IDs
     'portfolio_style' => 'style2',
-    'posts_per_page'  => '',
+    'posts_per_page'  => 8,
     'orderby'         => 'date',
   );
 
@@ -33,21 +33,23 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
 
   // Query
   $args = array(
-    'posts_per_page'  => 8,
+    'posts_per_page'  => $posts_per_page,
     'post_type'       => 'portfolio',
     'paged'           => $paged,
   );
-
-  $cats = ''; // here you can use a comma delimited list of category slugs, ie: 'kitchens,bathrooms,extensions'
 
   if( !empty($cats) ) {
     $args['tax_query'] = array(
       array(
         'taxonomy'  => 'portfolio-category',
-        'field'     => 'slug',
+        'field'     => 'id',
         'terms'     => explode( ',', $cats )
       )
     );
+
+    if (count($cats) == 1) {
+      $cat_id = $cats[0];
+    }
   }
 
   $tmp_query  = $wp_query;
@@ -90,7 +92,9 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
     // echo wp_list_categories( $filter_args );
     // echo '</ul>';
 
-    echo '<h2>Our Work</h2>';
+    $cat_name = get_term_by('id', $cat_id, 'portfolio-category');
+
+    echo '<h2>Our ' . $cat_name->name . '</h2>';
 
     echo '<ul class="grid portfolio-'. $portfolio_style .'" >';
       echo '<div class="grid-sizer"></div>';
@@ -116,7 +120,8 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
 
   echo '</div>';
 
-  echo file_get_contents(__DIR__ . "/../../../themes/sturlly-child-allcity/includes/cta-footer.php");
+  // TODO add a simple CTA to shoot user to bottom of page here
+  // echo file_get_contents(__DIR__ . "/../../../themes/sturlly-child-allcity/includes/cta-footer.php");
 
   wp_reset_query();
   wp_reset_postdata();

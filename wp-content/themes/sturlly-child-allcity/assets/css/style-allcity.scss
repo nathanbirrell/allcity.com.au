@@ -315,7 +315,8 @@ button {
 	 * PORTFOLIO / PROJECT SECTION
 	 */
 	// have to use ID here due to specificity issues
-	#work-gallery {
+	#work-gallery,
+	.work-gallery {
 		text-align: center;
 		// margin-bottom: 46px;
 
@@ -325,6 +326,7 @@ button {
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: center;
+			z-index: 1; // something in the theme is fucking with visibility of this on content pages
 		}
 		.grid li {
 			padding: 0;
