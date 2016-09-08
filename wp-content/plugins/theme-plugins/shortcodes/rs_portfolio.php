@@ -50,8 +50,10 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
     );
 
     if (explode( ',', $cats ) > 1) {
+      // homepage bruh
       $cat_name = 'Work';
     } else {
+      // content page, ie /bathrooms
       $cat_id = $cats[0];
       $cat_name = get_term_by('id', $cat_id, 'portfolio-category');
       $cat_name = $cat_name->name;

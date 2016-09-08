@@ -43,29 +43,27 @@ endif;
 <section id="blog-details" <?php post_class('blog-details white-bg blog-page'); ?>>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 col-md-8">
-                <div class="blog-listing">
-                    <?php
-                      while ( have_posts() ) : the_post();
-                      $post_format = (get_post_format() == true) ? get_post_format():'standard';
-                      get_template_part('post-formats/layout-1/content', $post_format );
-                    ?>
+            <div class="blog-listing">
+                <?php
+                  while ( have_posts() ) : the_post();
+                  $post_format = (get_post_format() == true) ? get_post_format():'standard';
+                  get_template_part('post-formats/layout-1/content', $post_format );
+                ?>
 
-                    <div class="col-md-12 blog-content">
-                      <article class="contentarea gallery">
-                        <?php the_content(); ?>
-                      </article>
-                    </div>
-
-                  <?php endwhile; ?>
-
-                    <div class="blogpost_share">
-                        <ul class="text-center">
-                          <?php rs_social_share(); ?>
-                        </ul>
-                    </div>
-                    <!-- blog details end -->
+                <div class="col-md-12 blog-content">
+                  <article class="contentarea gallery">
+                    <?php the_content(); ?>
+                  </article>
                 </div>
+
+              <?php endwhile; ?>
+
+                <div class="blogpost_share">
+                    <ul class="text-center">
+                      <?php rs_social_share(); ?>
+                    </ul>
+                </div>
+                <!-- blog details end -->
             </div>
 
             <!-- comment -->
