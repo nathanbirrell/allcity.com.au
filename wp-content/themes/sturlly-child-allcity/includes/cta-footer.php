@@ -13,7 +13,7 @@
                <div class="content-section no-padding">
                   <div class="container">
                     <div class="row">
-                      <form class="signup-form col-md-6 margin-auto-center">
+                      <form class="signup-form col-md-4 margin-auto-center">
                         <div class="form-group">
                           <input type="text" id="name" name="name" required="required" />
                           <label for="name" class="control-label">Name</label><i class="bar"></i>
