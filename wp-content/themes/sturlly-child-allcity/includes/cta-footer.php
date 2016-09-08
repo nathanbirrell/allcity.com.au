@@ -26,7 +26,7 @@
                           <input type="text" id="phone" name="phone" required="required" />
                           <label for="phone" class="control-label">Contact Phone</label><i class="bar"></i>
                         </div>
-                        <button type="button" class="button"><span>Arrange a Consultation</span></button>
+                        <button id="submit-to-mailchimp" type="button" class="button"><span>Arrange a Consultation</span></button>
                       </form>
                     </div>
                      <div class="row">
