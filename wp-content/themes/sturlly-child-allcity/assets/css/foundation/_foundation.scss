@@ -14,7 +14,7 @@
 @import 'settings/settings';
 
 // Components
-// @import 'grid/grid';
+@import 'grid/grid';
 @import 'typography/typography';
 @import 'forms/forms';
 @import 'components/visibility';
@@ -52,17 +52,17 @@
 // @import 'components/tooltip';
 
 // @mixin foundation-everything($flex: false) {
-//   @if $flex {
-//     $global-flexbox: true !global;
-//   }
+  // @if $flex {
+  //   $global-flexbox: true !global;
+  // }
 
-//   @include foundation-global-styles;
-//   @if not $flex {
-//     @include foundation-grid;
-//   }
-//   @else {
-//     @include foundation-flex-grid;
-//   }
+  @include foundation-global-styles;
+  // @if not $flex {
+    // @include foundation-grid;
+  // }
+  // @else {
+  //   @include foundation-flex-grid;
+  // }
   @include foundation-typography;
   @include foundation-forms;
   @include foundation-button;

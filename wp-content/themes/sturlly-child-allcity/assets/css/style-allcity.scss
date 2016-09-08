@@ -619,3 +619,13 @@ hr.space {
 			padding-right: 15px;
 		}
 	}
+
+/**
+ * MATERIAL DESIGN FORM
+ */
+
+@import 'material-design-form';
+
+.signup-form {
+	@include material-design-form();
+}

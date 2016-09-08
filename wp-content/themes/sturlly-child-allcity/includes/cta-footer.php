@@ -12,6 +12,22 @@
                </div>
                <div class="content-section no-padding">
                   <div class="container">
+                    <div class="row">
+                      <form class="signup-form col-md-6 margin-auto-center">
+                        <div class="form-group">
+                          <input type="text" id="name" name="name" required="required" />
+                          <label for="name" class="control-label">Name</label><i class="bar"></i>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" id="email" name="email" required="required" />
+                          <label for="email" class="control-label">Email</label><i class="bar"></i>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" id="phone" name="phone" required="required" />
+                          <label for="phone" class="control-label">Contact Phone</label><i class="bar"></i>
+                        </div>
+                      </form>
+                    </div>
                      <div class="row">
                         <div class="col-md-4 col-sm-6 no-padding"></div>
                         <div class="col-md-4">
@@ -34,7 +50,7 @@
                                  <li class="divider"></li>
                                  <li>
                                    <a href="https://goo.gl/maps/arnNrUny3dq" target="_blank">
-                                     <i class="fa fa-map-marker"></i> 
+                                     <i class="fa fa-map-marker"></i>
                                      <span class="cta-address">516 Waverley Road,<br>
                                      Malvern East, VIC 3145</span>
                                    </a>
