@@ -18,7 +18,7 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
     'cats'            => '',
     'portfolio_style' => 'style2',
     'posts_per_page'  => '',
-    'orderby'         => 'ID',
+    'orderby'         => 'date',
   );
 
   $atts['portfolio_style'] = 'allcity'; //Force all city theme
@@ -33,16 +33,18 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
 
   // Query
   $args = array(
-    'posts_per_page'  => $posts_per_page,
+    'posts_per_page'  => 8,
     'post_type'       => 'portfolio',
     'paged'           => $paged,
   );
+
+  $cats = ''; // here you can use a comma delimited list of category slugs, ie: 'kitchens,bathrooms,extensions'
 
   if( !empty($cats) ) {
     $args['tax_query'] = array(
       array(
         'taxonomy'  => 'portfolio-category',
-        'field'     => 'ids',
+        'field'     => 'slug',
         'terms'     => explode( ',', $cats )
       )
     );
@@ -56,60 +58,59 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
   echo '<div id="grid-gallery" class="grid-gallery no-padding-top no-padding-bottom rs-'.sanitize_html_class($portfolio_style).'">';
 
 
-  echo '<div id="work" class="work grid-wrap">';
+  echo '<div id="work-gallery" class="work grid-wrap">';
 
-    $filter_args = array(
-      'echo'     => 0,
-      'title_li' => '',
-      'style'    => 'none',
-      'taxonomy' => 'portfolio-category',
-      'walker'   => new Walker_Portfolio_List_Categories(),
-    );
+    // $filter_args = array(
+    //   'echo'     => 0,
+    //   'title_li' => '',
+    //   'style'    => 'none',
+    //   'taxonomy' => 'portfolio-category',
+    //   'walker'   => new Walker_Portfolio_List_Categories(),
+    // );
 
-    if( !empty($cats) ) {
+    // if( !empty($cats) ) {
+    //   $exp_cats = explode(',', $cats );
+    //   $new_cats = array();
+    //
+    //   foreach ( $exp_cats as $cat_value ) {
+    //     $has_children = get_term_children( $cat_value, 'portfolio-category' );
+    //     if( ! empty( $has_children ) ) {
+    //       $new_cats[] = implode( ',', $has_children );
+    //     } else {
+    //       $new_cats[] = $cat_value;
+    //     }
+    //   }
+    //   $filter_args['include'] = implode( ',', $new_cats );
+    // }
 
-      $exp_cats = explode(',', $cats );
-      $new_cats = array();
+    // $filter_args = wp_parse_args( $args, $filter_args );
 
-      foreach ( $exp_cats as $cat_value ) {
-        $has_children = get_term_children( $cat_value, 'portfolio-category' );
-        if( ! empty( $has_children ) ) {
-          $new_cats[] = implode( ',', $has_children );
-        } else {
-          $new_cats[] = $cat_value;
-        }
-      }
+    // echo '<ul class="filters isotope-filters " >';
+    // echo '<li><a class="activbut" data-filter="*" href="#">all</a></li>';
+    // echo wp_list_categories( $filter_args );
+    // echo '</ul>';
 
-      $filter_args['include'] = implode( ',', $new_cats );
+    echo '<h2>Our Work</h2>';
 
-    }
+    echo '<ul class="grid portfolio-'. $portfolio_style .'" >';
+      echo '<div class="grid-sizer"></div>';
 
-    $filter_args = wp_parse_args( $args, $filter_args );
+      echo '<div class="portfolio-items-wrap">';
+        while( have_posts() ) : the_post();
+          get_template_part('templates/portfolio-styles/portfolio', 'allcity' );
+        endwhile;
+      echo '</div>';
+    echo '</ul>';
+    echo '</div>';
 
-  echo '<ul class="filters isotope-filters " >';
-  echo '<li><a class="activbut" data-filter="*" href="#">all</a></li>';
-  echo wp_list_categories( $filter_args );
-  echo '</ul>';
-
-  echo '<ul class="grid isotope row  animated izotope-container portfolio-'. $portfolio_style .' " style="position-relative; overflow:hidden;" >';
-  echo '<div class="grid-sizer"></div>';
-  
- 	
-  while( have_posts() ) : the_post();
-    get_template_part('templates/portfolio-styles/portfolio', 'allcity' );
-  endwhile;
- 
-  echo '</ul>';
-  echo '</div>';
-
-  // echo '<div class="popup-wrappers">';
-  // while( have_posts() ) : the_post();
-  //   get_template_part('templates/portfolio-styles/portfolio', 'single' );
-  // endwhile;
-  // echo '<div class="popup-next"><span class="fa fa-angle-right"></span></div>';
-  // echo '<div class="popup-prev"><span class="fa fa-angle-left"></span></div>';
-  // echo '<div class="popup-close"></div>';
-  // echo '</div>';
+    // echo '<div class="popup-wrappers">';
+    // while( have_posts() ) : the_post();
+    //   get_template_part('templates/portfolio-styles/portfolio', 'single' );
+    // endwhile;
+    // echo '<div class="popup-next"><span class="fa fa-angle-right"></span></div>';
+    // echo '<div class="popup-prev"><span class="fa fa-angle-left"></span></div>';
+    // echo '<div class="popup-close"></div>';
+    // echo '</div>';
 
 
 
@@ -124,7 +125,6 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
   $output = ob_get_clean();
 
   return $output;
-
 }
 
-add_shortcode('rs_portfolio', 'rs_portfolio');
+  add_shortcode('rs_portfolio', 'rs_portfolio');
