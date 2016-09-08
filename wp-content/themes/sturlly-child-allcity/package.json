@@ -1,7 +1,10 @@
 {
   "name": "all-city",
   "version": "0.1.1",
-  "repository": "https://github.com/nathanbirrell/allcity.com.au.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanbirrell/allcity.com.au.git"
+  },
   "devDependencies": {
     "grunt": "~0.4.4",
     "grunt-contrib-uglify": "latest",
@@ -10,5 +13,27 @@
     "grunt-contrib-concat": "latest",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-sass": "latest"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/nathanbirrell/allcity.com.au/issues"
+  },
+  "homepage": "https://github.com/nathanbirrell/allcity.com.au#readme",
+  "description": "allcity.com.au",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1",
+    "foundation-sites": "^6.2.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "photoswipe": "^4.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathan Birrell",
+  "license": "ISC"
 }

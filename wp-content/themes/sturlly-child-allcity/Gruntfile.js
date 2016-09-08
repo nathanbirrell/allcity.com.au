@@ -36,13 +36,15 @@ var scripts = [
     // parentBase + 'js/*.js',
 
     childBase + 'js/vendor/clipboard.js',
-    
+
     childBase + 'js/vendor/foundation.js',
     childBase + 'js/vendor/foundation/*.js',
-    
+
     // childBase + '../node_modules/photoswipe/dist/photoswipe.js',
     // childBase + '../node_modules/photoswipe/dist/photoswipe-ui-default.js',
-    
+
+    childBase + 'node_modules/mailchimp-api/mailchimp.js',
+
     childBase + 'js/script.js'
 ];
 
@@ -113,13 +115,13 @@ module.exports = function(grunt) {
 
     // configure watch tasks for sass/css/js ------------------------------------
     watch: {
-      sass: { 
-        files: ['assets/css/*.scss', 'assets/css/foundation/*', parentBase + 'scss/*.scss'], 
-        tasks: ['sass','cssmin'] 
+      sass: {
+        files: ['assets/css/*.scss', 'assets/css/foundation/*', parentBase + 'scss/*.scss'],
+        tasks: ['sass','cssmin']
       },
-      scripts: { 
-        files: ['assets/js/*.js', parentBase + 'js/*.js'], 
-        tasks: ['uglify:dev'] 
+      scripts: {
+        files: ['assets/js/*.js', parentBase + 'js/*.js'],
+        tasks: ['uglify:dev']
       },
       grunt: {
         files: ['Gruntfile.js'],

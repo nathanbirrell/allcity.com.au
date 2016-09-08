@@ -26,6 +26,7 @@
                           <input type="text" id="phone" name="phone" required="required" />
                           <label for="phone" class="control-label">Contact Phone</label><i class="bar"></i>
                         </div>
+                        <button type="button" class="button"><span>Arrange a Consultation</span></button>
                       </form>
                     </div>
                      <div class="row">
@@ -39,7 +40,7 @@
                                 </button> -->
                               </div>
                               <ul class="icon-list">
-                                <li class="lead mailchimp-popup" id="cta-arrange-consultation"><button>Arrange a Consultation</button></li>
+                                <li class="mailchimp-popup" id="cta-arrange-consultation"><button class="lead button">Arrange a Consultation</button></li>
                                 <li class="divider"></li>
                                  <li class="phone">
                                     <button id ="cta-call-main" data-clipboard-text="03 9571 7000" class="copy-to-clipboard" title="Click to copy"><i class="fa fa-phone"></i>03 9571 7000</button>
