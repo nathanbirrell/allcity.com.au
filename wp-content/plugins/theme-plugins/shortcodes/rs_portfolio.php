@@ -10,6 +10,8 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
 
   global $wp_query, $paged, $post;
 
+  $cat_name = '';
+
   wp_enqueue_script('jquery-grid');
 
   $defaults = array(
@@ -47,8 +49,12 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
       )
     );
 
-    if (count($cats) == 1) {
+    if (explode( ',', $cats ) > 1) {
+      $cat_name = 'Work';
+    } else {
       $cat_id = $cats[0];
+      $cat_name = get_term_by('id', $cat_id, 'portfolio-category');
+      $cat_name = $cat_name->name;
     }
   }
 
@@ -92,9 +98,7 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
     // echo wp_list_categories( $filter_args );
     // echo '</ul>';
 
-    $cat_name = get_term_by('id', $cat_id, 'portfolio-category');
-
-    echo '<h2>Our ' . $cat_name->name . '</h2>';
+    echo '<h2>Our ' . $cat_name . '</h2>';
 
     echo '<ul class="grid portfolio-'. $portfolio_style .'" >';
       echo '<div class="grid-sizer"></div>';
