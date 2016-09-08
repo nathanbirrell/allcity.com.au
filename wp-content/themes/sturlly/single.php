@@ -23,7 +23,7 @@ endif;
 
 <div class="blog-details-header blog-details-header-style1"<?php echo $el_style_bg; ?>>
     <div class="overlay-white">
-        <div class="container">
+        <!-- <div class="container"> -->
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center">
                     <div class="intro-section os-animation" data-os-animation="fadeIn">
@@ -36,12 +36,12 @@ endif;
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 </div>
 
 <section id="blog-details" <?php post_class('blog-details white-bg blog-page'); ?>>
-    <div class="container">
+    <!-- <div class="container"> -->
         <div class="row">
             <div class="blog-listing">
                 <?php
@@ -79,7 +79,7 @@ endif;
             </div>
 
         </div>
-    </div>
+    <!-- </div> -->
     <!-- comment end... -->
 </section>
 
