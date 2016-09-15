@@ -17,7 +17,6 @@ ALLCITY.init = function() {
   });
 
   $('#cta-arrange-consultation').on('click', function() {
-    console.log('open');
     $('#contact').addClass('expanded');
   });
   $('#cta-arrange-consultation-close').on('click', function() {
