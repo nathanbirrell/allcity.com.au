@@ -273,7 +273,11 @@ ALLCITY.MailchimpForm = (function() {
   var self;
   return {
     config: {
-      submitButton: $('#submit-to-mailchimp')
+      submitButton: $('#submit-to-mailchimp'),
+      mailchimpDc: 'us13',
+      mailchimpListId: '249b7236b0',
+      mailchimpApiKey: 'xxx',
+      mailchimpApiEndpoint: '' // gets built later
     },
     init: function() {
       self = this;
@@ -281,23 +285,52 @@ ALLCITY.MailchimpForm = (function() {
       if (!self.config.submitButton.length) {
         return false;
       }
-      
+
       self.uiBindings();
+
+      // create api url
+      self.config.mailchimpApiEndpoint = '//' + self.config.mailchimpDc + '.api.mailchimp.com/3.0/lists/' + self.config.mailchimpListId + '/members/';
     },
     uiBindings: function() {
       self.config.submitButton.on('click', function() {
         if (!self.validateForm()) {
           return;
         }
-        self.submitToMailchimp();
+        self.submitToMailchimp(this);
       });
     },
     validateForm: function() {
       // TODO
       return true;
     },
-    submitToMailchimp: function() {
-      window.alert('sending this user to this list: ');
+    submitToMailchimp: function(form) {
+      var request = {
+        email_address: $('#email').val(),
+        status: 'subscribed',
+        merge_fields: {
+          FNAME: $('#name').val(),
+          PHONE: $('#phone').val()
+        }
+      };
+
+      console.log('mailchimp request: ', request);
+
+      $.ajax({
+          url: self.config.mailchimpApiEndpoint,
+          method: 'POST',
+          data: request,
+          dataType: 'jsonp',
+          contentType: 'application/json; charset=utf-8',
+          beforeSend: function(xhr) {
+            xhr.setRequestHeader("Authorization", "Basic " + btoa("api:" + self.config.mailchimpApiKey));
+          },
+          error: function(response, text){
+              console.log('Error', response);
+          },
+          success: function(response){
+              console.log('Success', response);
+          }
+      });
     }
   };
 })();
