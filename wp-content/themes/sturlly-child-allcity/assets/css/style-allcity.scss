@@ -482,6 +482,22 @@ button {
 	#contact { // AKA the CTA section in our footer
 		background-color: $primary-color;
 
+		&.expanded {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    z-index: 999999;
+	    display: block;
+
+			form {
+				display: block;
+			}
+		}
+
+		form {
+			display: none;
+		}
+
 		* {
 			color: #fff;
 		}
@@ -720,4 +736,8 @@ hr.space {
 
 .signup-form {
 	@include material-design-form();
+
+	.border-bottom {
+		float: none;
+	}
 }

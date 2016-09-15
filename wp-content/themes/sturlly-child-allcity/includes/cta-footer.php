@@ -13,21 +13,55 @@
                <div class="content-section no-padding">
                   <div class="container">
                     <div class="row">
-                      <form class="signup-form col-md-4 margin-auto-center">
-                        <div class="form-group">
-                          <input type="text" id="name" name="name" required="required" />
-                          <label for="name" class="control-label">Name</label><i class="bar"></i>
-                        </div>
-                        <div class="form-group">
-                          <input type="text" id="email" name="email" required="required" />
-                          <label for="email" class="control-label">Email</label><i class="bar"></i>
-                        </div>
-                        <div class="form-group">
-                          <input type="text" id="phone" name="phone" required="required" />
-                          <label for="phone" class="control-label">Contact Phone</label><i class="bar"></i>
-                        </div>
-                        <button id="submit-to-mailchimp" type="button" class="button"><span>Arrange a Consultation</span></button>
-                      </form>
+                      <div class="widget turbo_widget">
+                      	<div id="mc_signup" class="signup-form col-md-4 margin-auto-center">
+                      		<form method="post" action="#mc_signup" id="mc_signup_form">
+                      			<input type="hidden" id="mc_submit_type" name="mc_submit_type" value="js">
+                      			<input type="hidden" name="mcsf_action" value="mc_submit_signup_form">
+                      			<input type="hidden" id="_mc_submit_signup_form_nonce" name="_mc_submit_signup_form_nonce" value="6211a24622">
+
+                      			<div class="mc_form_inside">
+
+                      				<div class="updated" id="mc_message">
+                      				</div>
+                      				<!-- /mc_message -->
+
+                      				<div class="mc_merge_var form-group">
+                                <input type="text" size="18" placeholder="" name="mc_mv_EMAIL" id="mc_mv_EMAIL" class="mc_input" required="required">
+                      					<label for="mc_mv_EMAIL" class="mc_var_label mc_header mc_header_email control-label">Email Address<span class="mc_required">*</span></label>
+                      				</div>
+                      				<!-- /mc_merge_var -->
+                      				<div class="mc_merge_var form-group">
+                                <input type="text" size="18" placeholder="" name="mc_mv_FNAME" id="mc_mv_FNAME" class="mc_input" required="">
+                      					<label for="mc_mv_FNAME" class="mc_var_label mc_header mc_header_text control-label">Name</label>
+                      				</div>
+                      				<!-- /mc_merge_var -->
+                      				<div class="mc_merge_var form-group">
+                                <input type="text" size="18" value="" name="mc_mv_PHONE" id="mc_mv_PHONE" class="mc_input" required="">
+                      					<label for="mc_mv_PHONE" class="mc_var_label mc_header mc_header_phone control-label">Phone</label>
+                      				</div>
+                      				<!-- /mc_merge_var -->
+                      				<div class="mc_merge_var form-group">
+                                <input type="text" size="18" placeholder="" name="mc_mv_MMERGE4" id="mc_mv_MMERGE4" class="mc_input">
+                      					<label for="mc_mv_MMERGE4" class="mc_var_label mc_header mc_header_text control-label">Message</label>
+                      				</div>
+                      				<!-- /mc_merge_var -->
+                      				<!-- <div id="mc-indicates-required">
+                      					* = required field </div> -->
+                      				<!-- /mc-indicates-required -->
+
+                      				<div class="mc_signup_submit">
+                      					<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Arrange a Consultation" class="button">
+                                <a href="#contact" id="cta-arrange-consultation-close">Close</a>
+                      				</div>
+                      				<!-- /mc_signup_submit -->
+                      			</div>
+                      			<!-- /mc_form_inside -->
+                      		</form>
+                      		<!-- /mc_signup_form -->
+                      	</div>
+                      	<!-- /mc_signup_container -->
+                      </div>
                     </div>
                      <div class="row">
                         <div class="col-md-4 col-sm-6 no-padding"></div>
