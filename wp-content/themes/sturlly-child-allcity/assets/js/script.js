@@ -23,24 +23,6 @@ ALLCITY.init = function() {
     $('#contact').removeClass('expanded');
   });
 
-  // $('#blog-details img').each(function() {
-  // 	var $link = $(this).closest('a');
-  // 	var $img = $(this);
-  //
-  // 	$link.attr('data-size', $img.width() + 'x' + $img.height());
-  // 	$link.attr('itemprop', 'thumbnail');
-  // 	// $link.append('<figcaption itemprop="caption description"</figcaption>');
-  // 	$link.wrap('<figure class=\"\" itemprop=\"associatedMedia\" itemscope=\"\" itemtype=\"http://schema.org/ImageObject\"> </figure>');
-  // });
-
-  // var showMailchimpPopUp = function () {
-  //   require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us13.list-manage.com","uuid":"41ab846cc22bcc6e712d0b1e6","lid":"249b7236b0"}) })
-  //   document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-  // };
-  // $('.mailchimp-popup').click(function() {
-  //   showMailchimpPopUp();
-  // });
-
   var initPhotoSwipeFromDOM = function(gallerySelector) {
       // parse slide data (url, title, size ...) from DOM elements
       // (children of gallerySelector)
@@ -283,73 +265,6 @@ var mailchimpFormSuccessCallback = function() {
   $('.mc_form_inside').hide();
 };
 
-// ALLCITY.MailchimpForm = (function() {
-//   var self;
-//   return {
-//     config: {
-//       submitButton: $('#submit-to-mailchimp'),
-//       mailchimpDc: 'us13',
-//       mailchimpListId: '249b7236b0',
-//       mailchimpApiKey: 'xxx',
-//       mailchimpApiEndpoint: '' // gets built later
-//     },
-//     init: function() {
-//       self = this;
-//
-//       if (!self.config.submitButton.length) {
-//         return false;
-//       }
-//
-//       self.uiBindings();
-//
-//       // create api url
-//       self.config.mailchimpApiEndpoint = '//' + self.config.mailchimpDc + '.api.mailchimp.com/3.0/lists/' + self.config.mailchimpListId + '/members/';
-//     },
-//     uiBindings: function() {
-//       self.config.submitButton.on('click', function() {
-//         if (!self.validateForm()) {
-//           return;
-//         }
-//         self.submitToMailchimp(this);
-//       });
-//     },
-//     validateForm: function() {
-//       // TODO
-//       return true;
-//     },
-//     submitToMailchimp: function(form) {
-//       var request = {
-//         email_address: $('#email').val(),
-//         status: 'subscribed',
-//         merge_fields: {
-//           FNAME: $('#name').val(),
-//           PHONE: $('#phone').val()
-//         }
-//       };
-//
-//       console.log('mailchimp request: ', request);
-//
-//       $.ajax({
-//           url: self.config.mailchimpApiEndpoint,
-//           method: 'POST',
-//           data: request,
-//           dataType: 'jsonp',
-//           contentType: 'application/json; charset=utf-8',
-//           beforeSend: function(xhr) {
-//             xhr.setRequestHeader("Authorization", "Basic " + btoa("api:" + self.config.mailchimpApiKey));
-//           },
-//           error: function(response, text){
-//               console.log('Error', response);
-//           },
-//           success: function(response){
-//               console.log('Success', response);
-//           }
-//       });
-//     }
-//   };
-// })();
-
 $(document).ready(function() {
   ALLCITY.init();
-  // ALLCITY.MailchimpForm.init();
 });
