@@ -274,7 +274,14 @@ ALLCITY.init = function() {
       });
     });
   }
-}
+};
+
+/**
+ * Mailchimp success callback
+ */
+var mailchimpFormSuccessCallback = function() {
+  $('.mc_form_inside').hide();
+};
 
 // ALLCITY.MailchimpForm = (function() {
 //   var self;
