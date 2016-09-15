@@ -63,7 +63,7 @@
                       	<!-- /mc_signup_container -->
                       </div>
                     </div>
-                     <div class="row">
+                     <div class="row contact-row">
                         <div class="col-md-4 col-sm-6 no-padding"></div>
                         <div class="col-md-4">
                            <div class="contact-style1">
