@@ -16,7 +16,8 @@ ALLCITY.init = function() {
       $('.success.callout').removeClass('hidden').show().delay(3500).fadeOut();
   });
 
-  $('#cta-arrange-consultation').on('click', function() {
+  var ctaButtons = '#cta-arrange-consultation, #cta-get-quote';
+  $(ctaButtons).on('click', function() {
     $('#contact').addClass('expanded');
   });
   $('#cta-arrange-consultation-close').on('click', function() {

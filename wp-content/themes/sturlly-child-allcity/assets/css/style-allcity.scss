@@ -491,7 +491,8 @@ button {
 			height: 100%;
 	    display: block;
 
-			form {
+			form,
+			.contact-logo.margin-auto-center.margin-top {
 				display: block;
 			}
 
@@ -504,7 +505,8 @@ button {
 			margin: 0;
 		}
 
-		form {
+		form,
+		.contact-logo.margin-auto-center.margin-top {
 			display: none;
 		}
 
@@ -746,8 +748,13 @@ hr.space {
 
 .signup-form {
 	@include material-design-form();
+	text-align: center;
 
 	.border-bottom {
 		float: none;
 	}
+}
+
+#cta-arrange-consultation-close {
+	text-decoration: underline;
 }

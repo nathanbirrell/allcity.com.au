@@ -19,6 +19,9 @@
 		$('#mc_signup_submit').attr("disabled","disabled");
 	}
 	function mc_success(data){
+		// hide the form, they're done.
+		$('.mc_form_inside').hide();
+
 		// Re-enable the submit button
 		$('#mc_signup_submit').removeAttr("disabled");
 
@@ -33,9 +36,5 @@
 			});
 			$('#mc_submit_type').val('js');
 		}
-		$.scrollTo('#mc_signup', {offset: {top: -28}});
-
-		// hide the form, they're done.
-		i$('.mc_form_inside').hide();
 	}
 })(jQuery);

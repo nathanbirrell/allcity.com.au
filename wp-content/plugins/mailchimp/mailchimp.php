@@ -97,7 +97,7 @@ function mailchimpSF_load_resources() {
     // JS
     if (get_option('mc_use_javascript') == 'on') {
         if (!is_admin()) {
-            wp_enqueue_script('jquery_scrollto', MCSF_URL.'js/scrollTo.js', array('jquery'), MCSF_VER);
+            // wp_enqueue_script('jquery_scrollto', MCSF_URL.'js/scrollTo.js', array('jquery'), MCSF_VER);
             wp_enqueue_script('mailchimpSF_main_js', MCSF_URL.'js/mailchimp.js', array('jquery', 'jquery-form'), MCSF_VER);
             // some javascript to get ajax version submitting to the proper location
             global $wp_scripts;

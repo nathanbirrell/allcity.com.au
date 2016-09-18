@@ -35,7 +35,7 @@ function mailchimpSF_signup_form($args = array()) {
 	// 		echo !empty($after_title) ? $after_title : '</div><!-- /mc_custom_border_hdr -->';
 	// 	}
 	// 	else {
-	// 		echo $header; // don't escape $header b/c it may have HTML allowed
+			// echo $header; // don't escape $header b/c it may have HTML allowed
 	// 	}
 	// }
 
@@ -171,9 +171,11 @@ function mailchimpSF_signup_form($args = array()) {
 		// Show an explanation of the * if there's more than one field
 		if ($num_fields > 1) {
 			?>
+			<!--
 			<div id="mc-indicates-required">
 				* = <?php esc_html_e('required field', 'mailchimp_i18n'); ?>
-			</div><!-- /mc-indicates-required -->
+			</div>
+			-->
 			<?php
 		}
 
@@ -255,7 +257,7 @@ function mailchimpSF_signup_form($args = array()) {
 		?>
 
 	</div><!-- /mc_form_inside -->
-	<a href="#contact" id="cta-arrange-consultation-close">Close</a>
+	<a href="#contact" id="cta-arrange-consultation-close">CLOSE</a>
 	</form><!-- /mc_signup_form -->
 </div><!-- /mc_signup_container -->
 	<?php
@@ -340,7 +342,7 @@ function mailchimp_form_field($var, $num_fields) {
 	if ($var['required'] || get_option($opt) == 'on') {
 		$label = '<label for="'.esc_attr($opt).'" class="control-label mc_var_label mc_header mc_header_'.esc_attr($var['type']).'">'.esc_html($var['name']);
 		if ($var['required'] && $num_fields > 1) {
-			$label .= '<span class="mc_required">*</span>';
+			// $label .= '<span class="mc_required">*</span>';
 		}
 		$label .= '</label>';
 

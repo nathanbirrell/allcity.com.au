@@ -3,6 +3,7 @@
       <div class="container">
          <div class="row contact-us">
             <div class="col-md-12">
+               <img src="http://allcity.com.au/wp-content/uploads/2015/10/NEW_white-300x72.png" alt="All City Logo" class="margin-auto-center margin-top contact-logo" />
                <div class="title-style2 title-text">
                   <h2 class="title text-center">Book your free consultation today</h2>
                   <div class="green-line"></div>
