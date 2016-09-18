@@ -258,13 +258,6 @@ ALLCITY.init = function() {
   }
 };
 
-/**
- * Mailchimp success callback
- */
-var mailchimpFormSuccessCallback = function() {
-  $('.mc_form_inside').hide();
-};
-
 $(document).ready(function() {
   ALLCITY.init();
 });

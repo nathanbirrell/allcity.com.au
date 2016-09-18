@@ -282,7 +282,7 @@ function mailchimpSF_migrate_sopresto() {
         }
 
         $verify = mailchimpSF_verify_key($api);
-        
+
         //something went wrong with the key that we had
         if(is_wp_error($verify)) {
             return;
@@ -376,7 +376,7 @@ function mailchimpSF_delete_setup() {
             $options[] = $opt;
         }
     }
-    
+
     mailchimpSF_delete_options($options);
 }
 
@@ -464,7 +464,7 @@ function mailchimpSF_save_general_form_settings() {
     }
 
     /*Enable double optin toggle*/
-    
+
     if(isset($_POST['mc_double_optin'])) {
         update_option('mc_double_optin', true);
         $msg = '<p class="success_msg">'.__('Double opt-in turned On!', 'mailchimp_i18n').'</p>';
@@ -539,7 +539,7 @@ function mailchimpSF_save_general_form_settings() {
         update_option('mc_form_text_color', str_replace('#', '', $_POST['mc_form_text_color']));
     }
 
-    
+
     // IF NOT DEV MODE
     $igs = get_option('mc_interest_groups');
     if (is_array($igs)) {
@@ -607,7 +607,7 @@ function mailchimpSF_change_list_if_necessary() {
             if ($orig_list != $list_id){
                 // The user changed the list, Reset the Form Defaults
                 mailchimpSF_set_form_defaults($list_name);
-                
+
                 $new_list = true;
             }
     //      email_type_option
@@ -636,7 +636,7 @@ function mailchimpSF_change_list_if_necessary() {
 function mailchimpSF_get_merge_vars($list_id, $new_list) {
     $api = mailchimpSF_get_api();
     $mv = $api->get('lists/' . $list_id . '/merge-fields', 80);
-    
+
     if(is_wp_error($mv)) {
         return;
     }
@@ -654,7 +654,7 @@ function mailchimpSF_get_merge_vars($list_id, $new_list) {
 }
 
 function mailchimpSF_add_email_field($merge) {
-    
+
     $email = array(
         'tag' => 'EMAIL',
         'name' => __('Email Address', 'mailchimp_i18n'),
@@ -738,7 +738,7 @@ function mailchimpSF_signup_submit() {
     $merge = $errs = $html_errs = array(); // Set up some vars
 
     $merge = mailchimpSF_merge_submit($mv);
-    
+
     //Catch errors and fail early.
     if(is_wp_error($merge)) {
         $msg = "<strong class='mc_error_msg'>" . $merge->get_error_message() . "</strong>";
@@ -833,7 +833,7 @@ function mailchimpSF_subscribe_body($merge, $igs, $email_type, $email, $status, 
     return $body;
 }
 
-function mailchimpSF_check_status($endpoint) {      
+function mailchimpSF_check_status($endpoint) {
         $endpoint  .= '?fields=status';
         $api        = mailchimpSF_get_api();
         $subscriber = $api->get($endpoint, null);
@@ -849,9 +849,9 @@ function mailchimpSF_merge_submit($mv) {
     foreach($mv as $var) {
         // We also want to create an array where the keys are the tags for easier validation later
         $mv_tag_keys[$var['tag']] = $var;
-        
+
         $opt = 'mc_mv_'.$var['tag'];
-        
+
         $opt_val = isset($_POST[$opt]) ? stripslashes_deep($_POST[$opt]) : '';
 
         // Handle phone number logic
@@ -968,7 +968,7 @@ function mailchimpSF_groups_submit($igs) {
     if(empty($igs)) {
         return new StdClass();
     }
-    
+
     //get groups and ids
     //set all to false
 
@@ -1114,7 +1114,7 @@ function mailchimpSF_where_am_i() {
 
 
 /**
- * MODIFIED VERSION of wp_verify_nonce from WP Core. Core was not overridden to prevent problems when replacing 
+ * MODIFIED VERSION of wp_verify_nonce from WP Core. Core was not overridden to prevent problems when replacing
  * something universally.
  *
  * Verify that correct nonce was used with time limit.
@@ -1158,7 +1158,7 @@ function mailchimpSF_verify_nonce($nonce, $action = -1) {
 
 
 /**
- * MODIFIED VERSION of wp_create_nonce from WP Core. Core was not overridden to prevent problems when replacing 
+ * MODIFIED VERSION of wp_create_nonce from WP Core. Core was not overridden to prevent problems when replacing
  * something universally.
  *
  * Creates a cryptographic token tied to a specific action, user, and window of time.

@@ -13,54 +13,7 @@
                <div class="content-section no-padding">
                   <div class="container">
                     <div class="row">
-                      <div class="widget turbo_widget">
-                      	<div id="mc_signup" class="signup-form col-md-4 margin-auto-center">
-                      		<form method="post" action="#mc_signup" id="mc_signup_form">
-                      			<input type="hidden" id="mc_submit_type" name="mc_submit_type" value="js">
-                      			<input type="hidden" name="mcsf_action" value="mc_submit_signup_form">
-                      			<input type="hidden" id="_mc_submit_signup_form_nonce" name="_mc_submit_signup_form_nonce" value="6211a24622">
-
-                            <div class="updated" id="mc_message">
-                            </div>
-                            <!-- /mc_message -->
-
-                      			<div class="mc_form_inside">
-                      				<div class="mc_merge_var form-group">
-                                <input type="text" size="18" placeholder="" name="mc_mv_EMAIL" id="mc_mv_EMAIL" class="mc_input" required="required">
-                      					<label for="mc_mv_EMAIL" class="mc_var_label mc_header mc_header_email control-label">Email Address<span class="mc_required">*</span></label>
-                      				</div>
-                      				<!-- /mc_merge_var -->
-                      				<div class="mc_merge_var form-group">
-                                <input type="text" size="18" placeholder="" name="mc_mv_FNAME" id="mc_mv_FNAME" class="mc_input" required="">
-                      					<label for="mc_mv_FNAME" class="mc_var_label mc_header mc_header_text control-label">Name</label>
-                      				</div>
-                      				<!-- /mc_merge_var -->
-                      				<div class="mc_merge_var form-group">
-                                <input type="text" size="18" value="" name="mc_mv_PHONE" id="mc_mv_PHONE" class="mc_input" required="">
-                      					<label for="mc_mv_PHONE" class="mc_var_label mc_header mc_header_phone control-label">Phone</label>
-                      				</div>
-                      				<!-- /mc_merge_var -->
-                      				<div class="mc_merge_var form-group">
-                                <input type="text" size="18" placeholder="" name="mc_mv_MMERGE4" id="mc_mv_MMERGE4" class="mc_input">
-                      					<label for="mc_mv_MMERGE4" class="mc_var_label mc_header mc_header_text control-label">Message</label>
-                      				</div>
-                      				<!-- /mc_merge_var -->
-                      				<!-- <div id="mc-indicates-required">
-                      					* = required field </div> -->
-                      				<!-- /mc-indicates-required -->
-
-                      				<div class="mc_signup_submit">
-                      					<input type="submit" name="mc_signup_submit" id="mc_signup_submit" value="Arrange a Consultation" class="button">
-                      				</div>
-                      				<!-- /mc_signup_submit -->
-                      			</div>
-                      			<!-- /mc_form_inside -->
-                            <a href="#contact" id="cta-arrange-consultation-close">Close</a>
-                      		</form>
-                      		<!-- /mc_signup_form -->
-                      	</div>
-                      	<!-- /mc_signup_container -->
-                      </div>
+                      <?php mailchimpSF_signup_form(); ?>
                     </div>
                      <div class="row contact-row">
                         <div class="col-md-4 col-sm-6 no-padding"></div>

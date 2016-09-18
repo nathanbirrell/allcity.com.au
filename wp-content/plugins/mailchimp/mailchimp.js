@@ -35,8 +35,7 @@
 		}
 		$.scrollTo('#mc_signup', {offset: {top: -28}});
 
-		if (typeof mailchimpFormSuccessCallback == 'function') {
-		  mailchimpFormSuccessCallback(); 
-		}
+		// hide the form, they're done.
+		i$('.mc_form_inside').hide();
 	}
 })(jQuery);
