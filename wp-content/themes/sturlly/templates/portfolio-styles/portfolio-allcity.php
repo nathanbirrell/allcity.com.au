@@ -23,7 +23,7 @@ $image_array     = explode(',', $gallery_images);
 ?>
 
 
-<li class="portfolio-item item col-md-3 col-sm-3 gallery <?php echo sanitize_html_classes($slug); ?> " data-rel="popup-<?php print $post->ID;?>">
+<li class="portfolio-item item gallery <?php echo sanitize_html_classes($slug); ?> " data-rel="popup-<?php print $post->ID;?>">
   <figure class="portfolio-figure gallery-thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">
     <?php if(has_post_thumbnail()) {
       $thumb_id = get_post_thumbnail_id( $post_id );
