@@ -57,12 +57,6 @@ endif;
                 </div>
 
               <?php endwhile; ?>
-
-                <div class="blogpost_share">
-                    <ul class="text-center">
-                      <?php rs_social_share(); ?>
-                    </ul>
-                </div>
                 <!-- blog details end -->
             </div>
 
