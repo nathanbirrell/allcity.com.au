@@ -131,13 +131,10 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
      <div class="content-section pt-0-pb-65">
         <div class="container">
            <div class="row contact-us">
-              <div class="col-md-12">
+              <div class="col-xs-11 col-md-10 margin-auto-center">
                  <img src="http://allcity.com.au/wp-content/uploads/2015/10/NEW_white-300x72.png" alt="All City Logo" class="margin-auto-center margin-top contact-logo" />
                  <div class="margin-top title-text">
-                    <h2 class="title text-center">Book your free consultation today</h2>
-                 </div>
-                 <div class="text-center title-style2 clear-both">
-                    <div class="col-xs-10 title-style2 col-md-6 col-sm-8 text-center description margin-top margin-bottom margin-auto-center gray-text">Arrange an appointment at the showroom to make your dream home a reality.</div>
+                    <h2 class=" text-center">Book your free consultation today</h2>
                  </div>
                  <div class="content-section no-padding">
                     <div class="container">
@@ -145,15 +142,8 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
                         <?php mailchimpSF_signup_form(); ?>
                       </div>
                        <div class="row contact-row">
-                          <div class="col-md-4 col-sm-6 no-padding"></div>
-                          <div class="col-md-4">
+                          <div class="col-md-8 margin-auto-center text-center">
                              <div class="contact-style1">
-                                <div class="success callout hidden" data-closable>
-                                  <p>Copied to clipboard</p>
-                                  <!-- <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-                                    <span aria-hidden="true">&times;</span>
-                                  </button> -->
-                                </div>
                                 <ul class="icon-list">
                                   <li class="mailchimp-popup" id="cta-arrange-consultation"><button class="lead button">Arrange a Consultation</button></li>
                                 </ul>
