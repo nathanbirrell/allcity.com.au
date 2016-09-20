@@ -126,43 +126,46 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
 
   echo '</div>';
 
-  echo '
-  <section class="page-section cta-contact">
-     <div class="content-section pt-0-pb-65">
-        <div class="container">
-           <div class="row contact-us">
-              <div class="col-xs-11 col-md-10 margin-auto-center">
-                 <img src="http://allcity.com.au/wp-content/uploads/2015/10/NEW_white-300x72.png" alt="All City Logo" class="margin-auto-center margin-top contact-logo" />
-                 <div class="margin-top title-text">
-                    <h2 class=" text-center">Book your free consultation today</h2>
-                 </div>
-                 <div class="content-section no-padding">
-                    <div class="container">
-                      <div class="row">
-                        <?php mailchimpSF_signup_form(); ?>
+  wp_reset_query();
+
+  if (is_front_page()) {
+    echo '
+    <section class="page-section cta-contact">
+       <div class="content-section pt-0-pb-65">
+          <div class="container">
+             <div class="row contact-us">
+                <div class="col-xs-11 col-md-10 margin-auto-center">
+                   <img src="http://allcity.com.au/wp-content/uploads/2015/10/NEW_white-300x72.png" alt="All City Logo" class="margin-auto-center margin-top contact-logo" />
+                   <div class="margin-top title-text">
+                      <h2 class=" text-center">Book your free consultation today</h2>
+                   </div>
+                   <div class="content-section no-padding">
+                      <div class="container">
+                        <div class="row">
+                          <?php mailchimpSF_signup_form(); ?>
+                        </div>
+                         <div class="row contact-row">
+                            <div class="col-md-8 margin-auto-center text-center">
+                               <div class="contact-style1">
+                                  <ul class="icon-list">
+                                    <li class="mailchimp-popup" id="cta-arrange-consultation"><button class="lead button">Arrange a Consultation</button></li>
+                                  </ul>
+                               </div>
+                            </div>
+                         </div>
                       </div>
-                       <div class="row contact-row">
-                          <div class="col-md-8 margin-auto-center text-center">
-                             <div class="contact-style1">
-                                <ul class="icon-list">
-                                  <li class="mailchimp-popup" id="cta-arrange-consultation"><button class="lead button">Arrange a Consultation</button></li>
-                                </ul>
-                             </div>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>
-     </div>
-  </section>
-  ';
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </section>
+    ';
+  };
 
   // TODO add a simple CTA to shoot user to bottom of page here
   // echo file_get_contents(__DIR__ . "/../../../themes/sturlly-child-allcity/includes/cta-footer.php");
 
-  wp_reset_query();
   wp_reset_postdata();
   $wp_query = $tmp_query;
 
