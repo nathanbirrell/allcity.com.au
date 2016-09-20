@@ -479,6 +479,7 @@ button {
 		}
 	}
 
+	.cta-contact,
 	#contact { // AKA the CTA section in our footer
 		background-color: $primary-color;
 
@@ -603,12 +604,16 @@ button {
 		}
 
 		.callout.success {
-			background-color: rgba(255,255,255,0.3);
+			position: absolute;
+			bottom: 120px;
+			left: 0;
+			border: none;
+			background: $primary-color;
 			text-align: center;
+			width: 100%;
 
 			p {
 				margin: 0;
-			    margin-right: 22px;
 			}
 
 			.close-button {

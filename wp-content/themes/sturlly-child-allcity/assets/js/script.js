@@ -16,11 +16,23 @@ ALLCITY.init = function() {
       $('.success.callout').removeClass('hidden').show().delay(3500).fadeOut();
   });
 
-  var ctaButtons = '#cta-arrange-consultation, #cta-get-quote';
+  var ctaButtons = '#cta-arrange-consultation, #cta-get-quote, .cta-arrange-consultation';
   $(ctaButtons).on('click', function() {
+    console.log('open');
     $('#contact').addClass('expanded');
   });
   $('#cta-arrange-consultation-close').on('click', function() {
+    $('#contact').removeClass('expanded');
+  });
+
+  $('#contact .content-section').on('click', function(event) {
+    console.log('close');
+    event.stopPropagation();
+  });
+
+  // bg click close modal
+  $('#contact').on('click', function(event) {
+    console.log('close');
     $('#contact').removeClass('expanded');
   });
 
