@@ -26,12 +26,49 @@ Template: sturlly
 @import '../../../sturlly/assets/scss/responsive';
 @import '../../../sturlly/assets/scss/pretty-photo';
 
-@import 'foundation/foundation.scss';
+@import 'foundation/foundation';
+
+// @import '../vendor/photoswipe/photoswipe.css';
+// @import '../vendor/photoswipe/default-skin/default-skin.css';
 
 /* ==========================================================================
 All City Styles
 ========================================================================== */
- 
+
+$body-bg: #fff;
+// Shadows
+$shadow-inset: inset 0 2px 2px 0 rgba(0,0,0,.14);
+$shadow-0: 0 0 1px rgba(0, 0, 0, 0);
+$shadow-2: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+$shadow-3: 0 3px 4px 0 rgba(0,0,0,.14),0 3px 3px -2px rgba(0,0,0,.2),0 1px 8px 0 rgba(0,0,0,.12);
+$shadow-4: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+$shadow-6: 0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12),0 3px 5px -1px rgba(0,0,0,.2);
+$shadow-8: 0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12),0 5px 5px -3px rgba(0,0,0,.2);
+
+// Font Sizes
+$mf-font-size: 1rem !default;
+$mf-active-font-size: $mf-font-size * 0.8 !default;
+$mf-active-top: -$mf-font-size !default;
+
+// Margin & Paddings
+$mf-gap: $mf-font-size * 1.5 !default;
+$mf-spacer: $mf-font-size / 8 !default;
+$mf-fieldset-margin: 0 0 $mf-gap * 2 !default;
+$mf-checkbox-gap: $mf-font-size * 2 !default;
+$mf-checkbox-top: 0 !default;
+$mf-radio-margin: $mf-font-size / -4 !default;
+
+// Colors
+$mf-input-color: #333 !default;
+$mf-border-color: #eee !default;
+$mf-label-color: lighten($mf-border-color, 10%) !default;
+$mf-active-color: darken($mf-border-color, 10%) !default;
+$mf-focus-color: #fff !default;
+$mf-error-color: #d9534f !default;
+
+// Animation
+$mf-transition-speed: 0.28s !default;
+
 $primary-color: #48a5f2;
 
 @mixin font-size($small, $medium) {
@@ -51,6 +88,68 @@ h1 {
 
 h2 {
 	line-height: 1.4;
+}
+
+button {
+	background: transparent;
+}
+
+.button {
+	position: relative;
+	background: transparent;
+	display: block;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	border: 1px solid currentColor;
+	font-size: ($mf-font-size * 1.1);
+	color: lighten($mf-focus-color, 10%);
+	margin:( $mf-gap * 2) auto;
+	padding: ($mf-gap / 2) ($mf-gap * 2);
+	cursor: pointer;
+	transition: background-color $mf-transition-speed ease, color $mf-transition-speed ease, box-shadow $mf-transition-speed ease;
+	overflow: hidden;
+	box-shadow: $shadow-2;
+
+	span {
+		color: #fff;
+		position: relative;
+		z-index: 1;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		background: rgba(255,255,255,0.2);
+		border: 50vh solid rgba(255,255,255,0.2);
+		width: 30vh;
+		height: 30vh;
+		border-radius: 50%;
+		display: block;
+		top: 50%;
+		left: 50%;
+		z-index: 0;
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(0);
+	}
+
+	&:hover {
+		background: rgba(255,255,255,0.1);
+		box-shadow: $shadow-6;
+	}
+
+	&:active,
+	&:focus {
+		&::before {
+			transition: transform ($mf-transition-speed * 4) ease, opacity $mf-transition-speed ease ($mf-transition-speed * 1.3);
+			transform: translate(-50%, -50%) scale(1);
+			opacity: 0;
+		}
+	}
+
+	&:focus {
+		background: transparent;
+		outline: none;
+	}
 }
 
 // **************
@@ -95,7 +194,7 @@ h2 {
 			color: $primary-color;
 			border-color: $primary-color;
 			border-radius: 6px;
-			
+
 			width: 100%;
     		text-align: center;
 
@@ -107,6 +206,8 @@ h2 {
 			@media #{$medium-up} {
 				display: block;
 				width: auto;
+				padding: 7px 20px;
+    			font-size: 14px;
 			}
 		}
 
@@ -138,6 +239,22 @@ h2 {
 				}
 			}
 		}
+
+		@media #{$large-up} {
+			.logo-dark, .logo-white {
+			    height: 66px;
+			}
+
+			.navbar-default .navbar-nav>li>a,
+			.navbar-default .navbar-nav>li>a {
+			    font-size: 16px;
+			    font-weight: 400;
+			}
+
+			ul.nav.navbar-nav.navbar-left.navbar-blue {
+				margin-top: 6px;
+			}
+		}
 	}
 
 // **************
@@ -159,7 +276,7 @@ h2 {
 	    	top: 20%;
 	    }
 
-	    h1, 
+	    h1,
 	    span {
 	    	border: none;
 	    	text-transform: none;
@@ -281,31 +398,138 @@ h2 {
 		position: relative;
 		top: 0;
 
-		@media screen and (min-width: 480px) {
+		@media #{$small-up} {
 			min-height: 475px;
 		}
 	}
 
+	/**
+	 * PORTFOLIO / PROJECT SECTION
+	 */
+	// have to use ID here due to specificity issues
+	#work-gallery,
+	.work-gallery {
+		text-align: center;
+		// margin-bottom: 46px;
+
+		.portfolio-items-wrap {
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			z-index: 1; // something in the theme is fucking with visibility of this on content pages
+		}
+		.grid li {
+			padding: 0;
+			min-width: 320px;
+			flex-grow: 1;
+		}
+		.portfolio-allcity .portfolio-figure {
+			position: relative;
+			display: table;
+			margin: 0 auto;
+	    overflow: hidden;
+	    width: 100%;
+	    height: 350px;
+
+	    @media #{$small-only} {
+	    	max-width: 100%;
+	    }
+
+    	&:hover {
+    		img {
+    			filter: brightness(0.85);
+	    		-webkit-filter: brightness(0.85);
+	    		-moz-filter: brightness(0.85);
+	    		-ms-filter: brightness(0.85);
+	    		-o-filter: brightness(0.85);
+    		}
+    	}
+
+    	& img {
+		    min-height: 110%;
+		    min-width: 100%;
+		    height: 110%;
+		    width: auto;
+		    position: absolute;
+		    right: 0;
+		    bottom: 0;
+		    top: 0;
+		    left: 0;
+		    max-width: none;
+		    z-index: -1;
+
+    		filter: blur(1px) brightness(0.80);
+    		-webkit-filter: blur(1px) brightness(0.80);
+    		-moz-filter: blur(1px) brightness(0.80);
+    		-ms-filter: blur(1px) brightness(0.80);
+    		-o-filter: blur(1px) brightness(0.80);
+    	}
+
+    	figcaption {
+    		display: table-cell;
+		    text-align: center;
+		    vertical-align: middle;
+    		opacity: 1;
+		    background: transparent;
+		    color: #fff;
+		    font-size: 26px;
+			}
+		}
+	}
+
+	.cta-contact,
 	#contact { // AKA the CTA section in our footer
 		background-color: $primary-color;
+
+		&.expanded {
+	    position: fixed;
+			z-index: 999999;
+	    top: 0;
+	    left: 0;
+			width: 100%;
+			height: 100%;
+	    display: block;
+			overflow: scroll;
+
+			form,
+			.contact-logo.margin-auto-center.margin-top {
+				display: block;
+			}
+
+			.contact-row {
+				display: none;
+			}
+		}
+
+		#cta-arrange-consultation button {
+			margin: 0;
+		}
+
+		form,
+		.contact-logo.margin-auto-center.margin-top {
+			display: none;
+		}
 
 		* {
 			color: #fff;
 		}
 
 		.gray-text,
-		.blue .title-style2 h2, 
+		.blue .title-style2 h2,
 		.blue .title-style2 .gray-text h2,
 		.blue .title-style2 h2.title.text-center {
 			color: #fff!important;
 		}
 
-		a:hover {
-			
+		ul li {
+			cursor: pointer;
+    		cursor: hand;
 		}
 
 		a,
-		button {
+		button#cta-call-main {
 			background: transparent;
 			width: 100%;
 			height: 100%;
@@ -327,19 +551,81 @@ h2 {
 		.icon-list {
 			text-align: center;
 
-			li.lead {
-				padding: 12px;
-			    border: 1px solid #fff;
-			    border-radius: 5px;
+      li {
+        display: inline-block;
 
-			    &:hover {
+        a {
+          display: block;
+          text-align: left;
+        }
+      }
+
+			.button.lead {
+        display: block;
+				padding: 18px 32px;
+		    border: 1px solid #fff;
+		    border-radius: 5px;
+
+			  &:hover {
 					background: rgba(255,255,255,0.1);
-			    }
+		    }
 
-			    &,
-			    i {
-			    	@include font-size(22px, 30px);
+		    &,
+		    i {
+		    	@include font-size(18px, 24px);
+		    }
+			}
+
+			li.phone {
+				#cta-call-main {
+		    		display: none;
+		    	}
+				#cta-call-main-mob {
+					display: block;
+				}
+
+			    @media #{$medium-up} {
+			    	#cta-call-main {
+			    		display: block;
+			    	}
+					#cta-call-main-mob {
+						display: none;
+					}
 			    }
+			}
+
+      .cta-address {
+        padding-left: 32px;
+        display: inline-block;
+      }
+      .fa-map-marker {
+        vertical-align: top;
+        margin-right: -8px;
+      }
+		}
+
+		.callout.success {
+			position: absolute;
+			bottom: 120px;
+			left: 0;
+			border: none;
+			background: $primary-color;
+			text-align: center;
+			width: 100%;
+
+			p {
+				margin: 0;
+			}
+
+			.close-button {
+			    position: absolute;
+			    color: #8a8a8a;
+			    right: 1rem;
+			    top: 0.75rem;
+			    font-size: 2em;
+			    line-height: 1;
+			    cursor: pointer;
+			    background-color: transparent;
 			}
 		}
 
@@ -353,6 +639,9 @@ h2 {
 		.pt-0-pb-65 {
 		    padding-top: 0;
 		    padding-bottom: 35px;
+		}
+		ol, ul {
+		    margin-left: 0;
 		}
 	}
 
@@ -385,11 +674,39 @@ h2 {
 // **************
 
 	.blog-details-title {
-		font-weight: 100;
+		font-weight: 400;
+	}
+
+	.blog-details-header-style1 .intro-section {
+	    margin: auto;
+	    padding: 10% 0 10%;
+	}
+
+	.blog-details-header {
+		background-color: #fefefe;
+
+		*,
+		.blog-title,
+		.blog-details-title {
+			color: #000;
+		}
+
+		.overlay-white {
+			background-color: rgba(255,255,255,.8);
+		}
+	}
+
+	#blog-details {
+		quote {
+			font-size: x-large;
+	    	font-style: italic;
+	    	margin-bottom: 55px;
+	    	display: block;
+	    }
 	}
 
 // **************
-// Testimonials / Success stories 
+// Testimonials / Success stories
 // **************
 
 	.carousel-caption {
@@ -401,3 +718,49 @@ h2 {
 	.testimonial .carousel-caption {
 		color: #fff;
 	}
+
+
+// **************
+// Globals
+// **************
+
+.divider-dark {
+    background-color: transparent;
+}
+hr.space {
+	border: none;
+}
+
+// **************
+// Mailchimp contact form
+// **************
+
+// it's in an iframe so this don't work mate
+	.modalContent {
+		div#uniqName_3_1, div#uniqName_3_2 {
+		    width: 50%;
+		    display: inline-block;
+		}
+		div#uniqName_3_1 {
+			padding-right: 15px;
+		}
+	}
+
+/**
+ * MATERIAL DESIGN FORM
+ */
+
+@import 'material-design-form';
+
+.signup-form {
+	@include material-design-form();
+	text-align: center;
+
+	.border-bottom {
+		float: none;
+	}
+}
+
+#cta-arrange-consultation-close {
+	text-decoration: underline;
+}
