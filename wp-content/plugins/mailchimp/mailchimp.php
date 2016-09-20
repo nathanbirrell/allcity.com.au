@@ -793,10 +793,10 @@ function mailchimpSF_signup_submit() {
     }
 
     if($retval['status'] == 'subscribed') {
-        $esc = __("Success, you've been signed up.", 'mailchimp_i18n');
+        $esc = __("Thank you, we'll contact you soon to arrange your consultation.", 'mailchimp_i18n');
         $msg = "<strong class='mc_success_msg'>{$esc}</strong>";
     } else {
-        $esc = __("Success, you've been signed up! Please look for our confirmation email.", 'mailchimp_i18n');
+        $esc = __("Please look for our confirmation email so we can contact you to arrange your consultation.", 'mailchimp_i18n');
         $msg = "<strong class='mc_success_msg'>{$esc}</strong>";
     }
 
