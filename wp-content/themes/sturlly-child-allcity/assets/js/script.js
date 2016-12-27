@@ -12,11 +12,13 @@ ALLCITY.init = function() {
 
   // add material design bar to consultation form
   $('.wpforms-field').append('<i class="bar"></i>');
-  // move material design label below input element 
+  // move material design label below input element
   $('.wpforms-field').each(function(i, field) {
   	var label = $(field).children('.wpforms-field-label');
   	label.insertBefore($(field).children('.bar'));
   });
+  // Make confirmation text centered
+  $('.wpforms-confirmation-container').addClass('text-center');
 
   var clipboard = new Clipboard('.copy-to-clipboard');
 

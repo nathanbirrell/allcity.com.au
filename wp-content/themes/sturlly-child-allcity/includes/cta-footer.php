@@ -13,11 +13,6 @@
                <div class="content-section no-padding">
                   <div class="container">
                     <div class="row">
-                      <h1>OLD FORM</h1>
-                      <?php mailchimpSF_signup_form(); ?>
-                    </div>
-                    <div class="row">
-                      <h1>NEW FORM</h1>
                       <?php echo do_shortcode( '[wpforms id="554"]' ); ?>
                     </div>
                      <div class="row contact-row">
