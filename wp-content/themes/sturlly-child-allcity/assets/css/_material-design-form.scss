@@ -120,7 +120,7 @@
 			box-shadow: none;
 		}
 
-		.control-label {
+		label {
 			position: absolute;
 			top: ($mf-font-size / 4);
 			pointer-events: none;
@@ -185,7 +185,7 @@
 		textarea.has-value {
 			color: $mf-input-color;
 
-			~ .control-label {
+			~ label {
 				font-size: $mf-active-font-size;
 				color: $mf-active-color;
 				top: $mf-active-top;
@@ -199,7 +199,7 @@
 			&:focus {
 				outline: none;
 
-				~ .control-label {
+				~ label {
 					color: $mf-focus-color;
 				}
 
@@ -363,7 +363,7 @@
 
 	.has-error {
 		.legend.legend,
-		&.form-group .control-label.control-label {
+		&.form-group label {
 			// Prevent !importantRule
 			color: $mf-error-color;
 		}
