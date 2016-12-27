@@ -13,7 +13,10 @@
                <div class="content-section no-padding">
                   <div class="container">
                     <div class="row">
-                      <?php echo do_shortcode( '[wpforms id="554"]' ); ?>
+                      <!-- Dev -->
+                      <?//php echo do_shortcode( '[wpforms id="554"]' ); ?>
+                      <!-- Prod -->
+                      <?php echo do_shortcode( '[wpforms id="782"]' ); ?>
                     </div>
                      <div class="row contact-row">
                          <div class="contact-style1">
