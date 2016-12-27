@@ -19,7 +19,7 @@ function rs_portfolio( $atts, $content = '', $id = '' ){
     'class'           => '',
     'cats'            => '', // here you can use a comma delimited list of category IDs
     'portfolio_style' => 'style2',
-    'posts_per_page'  => 8,
+    'posts_per_page'  => 10,
     'orderby'         => 'date',
   );
 

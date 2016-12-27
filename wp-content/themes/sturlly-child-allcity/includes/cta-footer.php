@@ -13,7 +13,7 @@
                <div class="content-section no-padding">
                   <div class="container">
                     <div class="row">
-                      <?php mailchimpSF_signup_form(); ?>
+                      <?php echo do_shortcode( '[wpforms id="554"]' ); ?>
                     </div>
                      <div class="row contact-row">
                          <div class="contact-style1">
