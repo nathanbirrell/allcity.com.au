@@ -31,7 +31,7 @@ ALLCITY.init = function() {
     console.log('open');
     $('#contact').addClass('expanded');
   });
-  $('#cta-arrange-consultation-close').on('click', function() {
+  $('.cta-arrange-consultation-close').on('click', function() {
     $('#contact').removeClass('expanded');
   });
 

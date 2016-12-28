@@ -531,8 +531,6 @@ button {
 		a,
 		button#cta-call-main {
 			background: transparent;
-			width: 100%;
-			height: 100%;
 
 			&:hover,
 			&:active {
@@ -761,6 +759,37 @@ hr.space {
 	}
 }
 
-#cta-arrange-consultation-close {
+.cta-arrange-consultation-close {
+	display: none;
 	text-decoration: underline;
+
+	.expanded & {
+		display: block;
+	}
 }
+
+#cta-arrange-consultation-close {
+	text-align: center;
+	margin-top: -30px;
+}
+
+.close-icon {
+	position: fixed;
+  display: block;
+  top: 45px;
+	right: 25px;
+  text-align: right;
+  font-size: 1.4em;
+
+	@media #{$medium-up} {
+		right: 50px;
+	}
+}
+
+// .wpforms-recaptcha-container {
+// 	@media #{$small-only} {
+// 		position: relative;
+// 		width: 100vw;
+// 		left: -24px;
+// 	}
+// }

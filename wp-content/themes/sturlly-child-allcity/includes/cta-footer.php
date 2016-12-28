@@ -2,7 +2,7 @@
    <div class="content-section pt-0-pb-65">
       <div class="container">
          <div class="row contact-us">
-            <div class="col-xs-10 col-md-8 margin-auto-center">
+            <div class="col-xs-12 col-md-8 margin-auto-center">
                <img src="http://allcity.com.au/wp-content/uploads/2015/10/NEW_white-300x72.png" alt="All City Logo" class="margin-auto-center margin-top contact-logo" />
                <div class="margin-top title-text">
                   <h2 class="text-center">Book your free consultation today</h2>
@@ -11,12 +11,14 @@
                   <div class="col-xs-10 title-style2 col-md-6 col-sm-8 text-center description margin-top margin-bottom margin-auto-center gray-text">Arrange an appointment at the showroom to make your dream home a reality.</div>
                </div>
                <div class="content-section no-padding">
-                  <div class="container">
+                  <div class="col-md-12">
                     <div class="row">
+                      <a href="#contact" class="cta-arrange-consultation-close close-icon"><i class="fa fa-times"></i></a>
                       <!-- Dev -->
                       <?//php echo do_shortcode( '[wpforms id="554"]' ); ?>
                       <!-- Prod -->
                       <?php echo do_shortcode( '[wpforms id="782"]' ); ?>
+                      <a href="#contact" class="cta-arrange-consultation-close" id="cta-arrange-consultation-close">Close</a>
                     </div>
                      <div class="row contact-row">
                          <div class="contact-style1">
