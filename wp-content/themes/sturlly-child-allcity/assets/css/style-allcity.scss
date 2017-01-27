@@ -422,8 +422,10 @@ button {
 		}
 		.grid li {
 			padding: 0;
-			    width: 380px;
-			// flex-grow: 1;
+			flex: 1 1 100%;
+			@media #{$medium-up} {
+				flex: 1 1 33%;
+			}
 		}
 		.portfolio-allcity .portfolio-figure {
 			position: relative;
