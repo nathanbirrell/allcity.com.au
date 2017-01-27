@@ -426,6 +426,9 @@ button {
 			@media #{$medium-up} {
 				flex: 1 1 33%;
 			}
+			@media #{$large-up} {
+				flex: 1 1 25%;
+			}
 		}
 		.portfolio-allcity .portfolio-figure {
 			position: relative;
