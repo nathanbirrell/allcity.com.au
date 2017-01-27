@@ -785,10 +785,6 @@ hr.space {
 	}
 }
 
-// .wpforms-recaptcha-container {
-// 	@media #{$small-only} {
-// 		position: relative;
-// 		width: 100vw;
-// 		left: -24px;
-// 	}
-// }
+.page-section.page-multi {
+    padding: 0;
+}
