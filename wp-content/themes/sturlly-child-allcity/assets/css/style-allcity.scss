@@ -422,8 +422,13 @@ button {
 		}
 		.grid li {
 			padding: 0;
-			    width: 380px;
-			// flex-grow: 1;
+			flex: 1 1 100%;
+			@media #{$medium-up} {
+				flex: 1 1 33%;
+			}
+			@media #{$large-up} {
+				flex: 1 1 25%;
+			}
 		}
 		.portfolio-allcity .portfolio-figure {
 			position: relative;
@@ -460,11 +465,11 @@ button {
 		    max-width: none;
 		    z-index: -1;
 
-    		filter: blur(1px) brightness(0.80);
-    		-webkit-filter: blur(1px) brightness(0.80);
-    		-moz-filter: blur(1px) brightness(0.80);
-    		-ms-filter: blur(1px) brightness(0.80);
-    		-o-filter: blur(1px) brightness(0.80);
+    		filter: brightness(0.90);
+    		-webkit-filter: brightness(0.90);
+    		-moz-filter: brightness(0.90);
+    		-ms-filter: brightness(0.90);
+    		-o-filter: brightness(0.90);
     	}
 
     	figcaption {
@@ -475,6 +480,7 @@ button {
 		    background: transparent;
 		    color: #fff;
 		    font-size: 26px;
+				text-shadow: 0.5px 0.75px 4.5px #333;
 			}
 		}
 	}
